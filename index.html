@@ -1,0 +1,3233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thangappan's Career Consulting</title>
+<meta name="description" content="Professional CVs. Personal Touch. No Refunds.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@600;700&family=Gochi+Hand&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Palette */
+  --bg:#F0EAE0;
+  --bg-alt:#E8E0D4;
+  --card:#FFFDF9;
+  --card-border:rgba(210,195,175,0.55);
+  --ink:#18181B;
+  --ink-2:#52525B;
+  --ink-3:#A1A1AA;
+  --line:rgba(210,195,175,0.7);
+  --gold:#C9960C;
+  --gold-light:#F4C842;
+  --gold-glow:rgba(201,150,12,0.14);
+  --forest:#163D2B;
+  --forest-mid:#255C40;
+  --forest-light:#3D8C60;
+  --forest-glow:rgba(22,61,43,0.1);
+  --red:#991B1B;
+  --white:#FFFFFF;
+  /* Shadow system */
+  --s1:0 1px 3px rgba(0,0,0,0.04),0 4px 12px rgba(0,0,0,0.05);
+  --s2:0 2px 8px rgba(0,0,0,0.05),0 12px 40px rgba(0,0,0,0.09);
+  --s3:0 8px 24px rgba(0,0,0,0.07),0 32px 80px rgba(0,0,0,0.12);
+  --s4:0 20px 60px rgba(0,0,0,0.15),0 4px 16px rgba(0,0,0,0.08);
+  /* Metrics */
+  --r:20px; --r-sm:10px; --r-xs:6px;
+  --ease:cubic-bezier(0.16,1,0.3,1);
+  --ease-spring:cubic-bezier(0.34,1.56,0.64,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{
+  font-family:'Inter',sans-serif;
+  color:var(--ink);
+  min-height:100vh;
+  background-color:var(--bg);
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h60v60H0z' fill='none'/%3E%3Cpath d='M30 0v60M0 30h60' stroke='%23C9960C' stroke-width='0.15' stroke-opacity='0.18'/%3E%3C/svg%3E"),
+    radial-gradient(ellipse 80% 50% at 50% -10%,rgba(201,150,12,0.06),transparent),
+    radial-gradient(ellipse 60% 40% at 100% 100%,rgba(22,61,43,0.07),transparent);
+}
+.hidden{display:none!important}
+
+/* ══ Layout ══ */
+.page{
+  max-width:680px;
+  margin:56px auto 100px;
+  padding:0 20px;
+  position:relative;
+  animation:cardIn 0.5s var(--ease-spring) both;
+}
+.page-card{
+  background:var(--card);
+  border-radius:var(--r);
+  padding:60px 64px;
+  box-shadow:var(--s3);
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--card-border);
+}
+/* Left gold bar */
+.page-card::before{
+  content:'';
+  position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,var(--gold-light) 0%,var(--gold) 40%,var(--forest-mid) 100%);
+}
+/* Subtle top-right watermark */
+.page-card::after{
+  content:'TC';
+  position:absolute;top:20px;right:24px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:0.72rem;font-weight:600;
+  letter-spacing:0.2em;color:rgba(0,0,0,0.06);
+  text-transform:uppercase;
+  pointer-events:none;
+}
+@media(max-width:720px){
+  .page{margin:24px auto 60px;padding:0 14px}
+  .page-card{padding:36px 28px}
+}
+@keyframes cardIn{
+  0%{opacity:0;transform:translateY(20px) scale(0.97);filter:blur(4px)}
+  100%{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+}
+@keyframes shake{
+  0%,100%{transform:translateX(0)}
+  15%{transform:translateX(-8px) rotate(-0.3deg)}
+  30%{transform:translateX(8px) rotate(0.3deg)}
+  50%{transform:translateX(-5px)}
+  70%{transform:translateX(5px)}
+  85%{transform:translateX(-2px)}
+}
+.shake{animation:shake 0.6s var(--ease)}
+
+/* ══ Typography ══ */
+.section-label{
+  font-family:'Inter',sans-serif;
+  font-size:0.65rem;font-weight:600;
+  letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--forest-light);
+  margin-bottom:14px;
+  display:flex;align-items:center;gap:12px;
+}
+.section-label::after{
+  content:'';flex:1;height:0.5px;
+  background:linear-gradient(90deg,var(--line),transparent);
+}
+.page-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:3rem;font-weight:700;
+  color:var(--forest);line-height:1.1;
+  letter-spacing:-0.02em;margin-bottom:8px;
+}
+.page-subtitle{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.15rem;font-style:italic;
+  font-weight:400;
+  color:var(--ink-2);margin-bottom:28px;
+  line-height:1.65;
+}
+.input-label{
+  font-family:'Inter',sans-serif;
+  font-size:0.78rem;font-weight:600;
+  color:var(--ink);margin-bottom:8px;
+  display:block;letter-spacing:0.03em;
+  text-transform:uppercase;
+}
+.fine-print{
+  font-family:'Inter',sans-serif;
+  font-size:0.73rem;color:var(--ink-3);
+  line-height:1.6;
+}
+
+/* ══ Inputs ══ */
+input[type="text"],input[type="number"],input[type="email"],
+input[type="tel"],input[type="password"],select,textarea{
+  width:100%;
+  padding:14px 18px;
+  border:1px solid rgba(210,195,175,0.8);
+  border-radius:var(--r-sm);
+  font-family:'Inter',sans-serif;font-size:0.95rem;font-weight:400;
+  color:var(--ink);
+  background:#FFFCF5;
+  transition:border-color 0.2s,box-shadow 0.2s;
+  outline:none;margin-bottom:16px;
+  line-height:1.5;
+}
+input:focus,select:focus,textarea:focus{
+  border-color:var(--forest-light);
+  background:#fff;
+  box-shadow:0 0 0 3px var(--forest-glow);
+  animation:focusExpand 0.25s var(--ease) both;
+}
+@keyframes focusExpand{0%{box-shadow:0 0 0 0 transparent}100%{box-shadow:0 0 0 3px var(--forest-glow)}}
+input:disabled,select:disabled,textarea:disabled{
+  opacity:0.38;cursor:not-allowed;
+}
+textarea{resize:vertical;min-height:96px;line-height:1.75}
+select{
+  cursor:pointer;
+  appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%2352525B' stroke-width='1.5' stroke-linecap='round' d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;
+  padding-right:40px;
+}
+
+/* ══ Buttons ══ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-family:'Inter',sans-serif;font-weight:600;font-size:0.88rem;
+  letter-spacing:0.04em;text-transform:uppercase;
+  padding:15px 36px;border-radius:var(--r-sm);
+  border:none;cursor:pointer;
+  transition:transform 0.18s var(--ease),box-shadow 0.18s var(--ease),opacity 0.15s;
+  position:relative;overflow:hidden;
+}
+.btn::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,0);transition:background 0.2s}
+.btn:hover::after{background:rgba(255,255,255,0.1)}
+.btn:hover{transform:translateY(-2px) scale(1.02)}
+.btn:active{transform:translateY(1px) scale(0.96)}
+.btn-primary{
+  background:var(--forest);
+  color:#fff;
+  box-shadow:0 1px 0 var(--forest-mid) inset,0 4px 0 #0D2319,var(--s2);
+}
+.btn-primary:hover{box-shadow:0 1px 0 var(--forest-mid) inset,0 4px 0 #0D2319,0 16px 40px rgba(22,61,43,0.35)}
+.btn-saffron{
+  background:var(--gold);
+  color:#fff;
+  box-shadow:0 1px 0 rgba(255,255,255,0.1) inset,0 4px 0 #9A7008,var(--s2);
+}
+.btn-saffron:hover{box-shadow:0 1px 0 rgba(255,255,255,0.1) inset,0 4px 0 #9A7008,0 16px 40px rgba(201,150,12,0.4)}
+.btn-ghost{
+  background:transparent;color:var(--forest);
+  border:1px solid rgba(22,61,43,0.35);box-shadow:none;
+}
+.btn-ghost:hover{background:var(--forest);color:#fff;border-color:transparent;box-shadow:var(--s2)}
+.btn-full{width:100%;justify-content:center}
+.btn-danger{
+  background:#991B1B;
+  color:#fff;
+  box-shadow:0 1px 0 rgba(255,255,255,0.1) inset,0 4px 0 #6B1111,var(--s2);
+}
+.btn-danger:hover{box-shadow:0 1px 0 rgba(255,255,255,0.1) inset,0 4px 0 #6B1111,0 16px 40px rgba(153,27,27,0.4)}
+.btn:disabled{opacity:0.35;cursor:not-allowed;transform:none!important;pointer-events:none}
+
+/* ══ Thangappan Dialogue ══ */
+.thang-box{
+  background:var(--forest);
+  color:#FFFFFF;
+  border-radius:2px 18px 18px 18px;
+  padding:24px 30px;
+  margin:32px 0 20px;
+  font-family:'Gochi Hand',cursive;
+  font-size:1.3rem;font-weight:400;line-height:1.9;
+  position:relative;
+  box-shadow:6px 6px 0 var(--gold),var(--s3);
+  border:1px solid rgba(255,255,255,0.04);
+}
+.thang-box::before{
+  content:'';
+  position:absolute;top:-12px;left:24px;
+  border:12px solid transparent;
+  border-bottom-color:var(--forest);
+  border-top:0;
+}
+.thang-box .cursor{
+  display:inline-block;width:2.5px;height:1.1em;
+  background:var(--gold-light);vertical-align:middle;
+  margin-left:3px;animation:blink 0.8s infinite;border-radius:2px;
+}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+
+/* ══ Choice Cards ══ */
+.choice-row{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}
+.choice-card{
+  flex:1;min-width:140px;
+  padding:16px 20px;
+  border:1px solid rgba(210,195,175,0.8);
+  border-radius:var(--r-sm);
+  text-align:center;cursor:pointer;
+  font-family:'Inter',sans-serif;font-weight:500;font-size:0.9rem;
+  transition:all 0.18s var(--ease);
+  background:#FFFCF5;
+  color:var(--ink);
+}
+.choice-card:hover{
+  border-color:var(--forest-light);
+  background:#fff;
+  box-shadow:var(--s2),0 0 0 1px var(--forest-light);
+  transform:translateY(-2px);
+}
+.choice-card.selected{
+  border-color:var(--forest);
+  background:linear-gradient(135deg,rgba(22,61,43,0.05),rgba(61,140,96,0.07));
+  box-shadow:0 0 0 2px var(--forest);
+  color:var(--forest);font-weight:600;
+}
+.choice-card.disabled{opacity:0.35;cursor:not-allowed;pointer-events:none;transform:none!important}
+
+/* ══ Progress Bar ══ */
+#progress{
+  position:fixed;top:0;left:0;right:0;height:2px;
+  background:rgba(0,0,0,0.05);z-index:9999;
+}
+#progress-fill{
+  height:100%;
+  background:linear-gradient(90deg,var(--gold-light),var(--gold),var(--forest-light));
+  transition:width 0.8s var(--ease);
+  width:0%;
+}
+
+/* ══ Thangappan Avatar Panel ══ */
+#thang-avatar{
+  position:fixed;bottom:28px;left:28px;
+  z-index:1000;
+  display:flex;flex-direction:column;
+  align-items:center;gap:0;
+  transition:opacity 0.8s,transform 0.6s var(--ease);
+  filter:drop-shadow(0 12px 32px rgba(0,0,0,0.22));
+}
+.thang-card{
+  background:var(--forest);
+  border-radius:16px 16px 0 0;
+  width:90px;
+  overflow:hidden;
+  border:2px solid var(--gold);
+  border-bottom:none;
+  position:relative;
+}
+.thang-face{
+  width:90px;height:90px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:42px;
+  animation:bob 3.5s ease-in-out infinite;
+  cursor:default;
+  background:rgba(0,0,0,0.15);
+  overflow:hidden;
+}
+.thang-face img{width:100%;height:100%;object-fit:cover}
+@keyframes bob{
+  0%,100%{transform:translateY(0) rotate(-1.5deg)}
+  50%{transform:translateY(-6px) rotate(1.5deg)}
+}
+.thang-name-tag{
+  background:var(--gold);
+  color:var(--forest);
+  font-family:'Inter',sans-serif;
+  font-size:0.68rem;font-weight:700;
+  padding:5px 0;
+  text-align:center;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  border-radius:0 0 12px 12px;
+  border:2px solid var(--gold);
+  border-top:none;
+  width:90px;
+}
+
+/* ══ Typing Dots ══ */
+.dot-1,.dot-2,.dot-3{animation:dotPulse 1.4s infinite;display:inline-block;color:var(--gold-light)}
+.dot-2{animation-delay:0.25s}.dot-3{animation-delay:0.5s}
+@keyframes dotPulse{0%,80%,100%{transform:scale(0.5);opacity:0.25}40%{transform:scale(1.1);opacity:1}}
+
+/* ══ System Notifications ══ */
+.sys-notif{
+  position:fixed;top:56px;right:20px;
+  background:rgba(255,253,249,0.98);
+  border-radius:16px;
+  padding:16px 20px;max-width:300px;
+  font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:400;
+  box-shadow:var(--s4);
+  border:1px solid var(--card-border);
+  animation:slideInRight 0.45s var(--ease) both;
+  z-index:9998;line-height:1.6;
+  backdrop-filter:blur(20px);
+}
+@keyframes slideInRight{from{transform:translateX(115%);opacity:0}to{transform:translateX(0);opacity:1}}
+.sys-notif.out{animation:slideOutRight 0.3s ease-in forwards}
+@keyframes slideOutRight{to{transform:translateX(115%);opacity:0}}
+
+/* ══ Badge Pill ══ */
+.badge-pill{
+  display:inline-flex;align-items:center;gap:6px;
+  background:transparent;
+  padding:6px 16px;
+  border-radius:100px;
+  font-size:0.73rem;font-weight:500;
+  font-family:'Inter',sans-serif;
+  border:1px solid rgba(201,150,12,0.35);
+  color:var(--gold);margin:16px 0;
+  letter-spacing:0.02em;
+}
+
+/* ══ Grid ══ */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+/* ══ Avatar Frame ══ */
+.avatar-frame{
+  width:148px;height:148px;border-radius:50%;
+  border:3px solid var(--gold);
+  box-shadow:0 0 0 6px rgba(201,150,12,0.1),0 0 0 12px rgba(201,150,12,0.04),var(--s3);
+  margin:20px auto;display:block;background:var(--bg);
+}
+
+/* ══ Snowflakes ══ */
+.snowflake{position:fixed;color:#93C5FD;font-size:1.1rem;pointer-events:none;z-index:100;opacity:0.6}
+@keyframes snowfall{0%{transform:translateY(-10vh) rotate(0deg)}100%{transform:translateY(110vh) rotate(360deg)}}
+
+/* ══ Recording Banner ══ */
+#rec-banner{
+  position:fixed;top:0;left:0;right:0;
+  background:#7F1D1D;
+  color:rgba(255,255,255,0.9);
+  font-family:'Inter',sans-serif;
+  font-size:0.7rem;font-weight:600;
+  text-align:center;padding:6px;
+  z-index:9999;letter-spacing:0.18em;text-transform:uppercase;
+  display:none;
+}
+
+/* ══ Fake Meet — Professional Google Meet Style ══ */
+#fake-meet{
+  position:fixed;inset:0;z-index:500;
+  background:#202124;
+  display:flex;flex-direction:column;
+  font-family:'Inter','Google Sans',Arial,sans-serif;
+  overflow:hidden;
+}
+body.meet-active{overflow:hidden!important}
+#fake-meet *{box-sizing:border-box}
+
+/* Top bar */
+.meet-header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 16px;
+  height:56px;min-height:56px;
+  background:#202124;
+  border-bottom:1px solid rgba(255,255,255,0.06);
+  z-index:10;
+}
+.meet-header-left{
+  display:flex;align-items:center;gap:12px;
+}
+.meet-header-logo{
+  display:flex;align-items:center;gap:8px;
+  font-size:1.1rem;font-weight:500;
+  color:rgba(255,255,255,0.9);
+}
+.meet-header-logo svg{width:28px;height:28px}
+.meet-header-sep{width:1px;height:24px;background:rgba(255,255,255,0.12)}
+.meet-header-title{
+  font-size:0.85rem;font-weight:500;
+  color:rgba(255,255,255,0.7);
+  letter-spacing:0.01em;
+}
+.meet-header-right{
+  display:flex;align-items:center;gap:16px;
+}
+.meet-header-time{
+  font-size:0.8rem;font-weight:400;
+  color:rgba(255,255,255,0.55);
+  font-variant-numeric:tabular-nums;
+}
+.meet-header-code{
+  font-size:0.75rem;font-weight:400;
+  color:rgba(255,255,255,0.4);
+  letter-spacing:0.02em;
+}
+.meet-header-participants{
+  display:flex;align-items:center;gap:6px;
+  font-size:0.8rem;color:rgba(255,255,255,0.7);
+  background:rgba(255,255,255,0.06);
+  padding:6px 14px;border-radius:20px;
+}
+.meet-rec-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:#EA4335;
+  animation:recPulse 1.5s ease-in-out infinite;
+  margin-right:4px;
+}
+@keyframes recPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.8)}}
+
+/* Grid area */
+.meet-grid-area{
+  flex:1;
+  display:flex;
+  align-items:center;justify-content:center;
+  padding:12px;
+  position:relative;
+  overflow:hidden;
+  min-height:0;
+}
+#meet-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:1fr 1fr;
+  gap:8px;
+  width:100%;height:100%;
+  max-width:1200px;
+  max-height:calc(100vh - 56px - 80px);
+}
+
+/* Tiles */
+.meet-tile{
+  background:#3C4043;
+  border-radius:8px;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  position:relative;
+  overflow:hidden;
+  min-height:0;
+}
+.meet-tile video{
+  width:100%;height:100%;
+  object-fit:cover;
+  border-radius:8px;
+  transform:scaleX(-1);
+}
+.meet-tile canvas{
+  width:100%;height:100%;
+  object-fit:cover;
+  border-radius:8px;
+}
+.meet-tile-avatar{
+  width:64px;height:64px;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.6rem;font-weight:600;
+  color:#fff;
+  text-transform:uppercase;
+  user-select:none;
+}
+.meet-tile-avatar img{
+  width:100%;height:100%;
+  border-radius:50%;
+  object-fit:cover;
+}
+.meet-tile-name{
+  position:absolute;
+  bottom:8px;left:12px;
+  font-size:0.78rem;font-weight:400;
+  color:rgba(255,255,255,0.9);
+  padding:4px 10px;
+  border-radius:4px;
+  background:rgba(0,0,0,0.55);
+  backdrop-filter:blur(4px);
+  max-width:calc(100% - 24px);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.meet-tile-mic{
+  position:absolute;bottom:8px;right:12px;
+  width:28px;height:28px;border-radius:50%;
+  background:rgba(0,0,0,0.55);
+  backdrop-filter:blur(4px);
+  display:flex;align-items:center;justify-content:center;
+  font-size:0.75rem;
+}
+.meet-tile-status{
+  position:absolute;top:8px;right:8px;
+  display:flex;gap:4px;flex-direction:column;align-items:flex-end;
+}
+.meet-status-badge{
+  font-size:0.65rem;font-weight:500;
+  padding:3px 8px;border-radius:4px;
+  backdrop-filter:blur(4px);
+}
+.meet-status-badge.poor{background:rgba(234,67,53,0.7);color:#fff}
+.meet-status-badge.muted{background:rgba(0,0,0,0.5);color:rgba(255,255,255,0.8)}
+.meet-tile-speaking{
+  position:absolute;inset:0;
+  border:2px solid #1A73E8;
+  border-radius:8px;
+  pointer-events:none;
+  opacity:0;
+  transition:opacity 0.25s;
+}
+.meet-tile.speaking .meet-tile-speaking{opacity:1}
+
+/* HR tile special */
+.meet-tile-hr-photo{
+  width:100%;height:100%;
+  object-fit:cover;
+  border-radius:8px;
+  filter:brightness(0.3) blur(4px) grayscale(0.5);
+  transition:filter 0.8s ease;
+}
+.meet-tile-hr-photo.active{
+  filter:brightness(0.6) blur(1px) grayscale(0.2);
+}
+
+/* Self PIP */
+.meet-self-pip{
+  position:absolute;
+  bottom:16px;right:16px;
+  width:180px;height:120px;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 4px 20px rgba(0,0,0,0.6);
+  z-index:20;
+  background:#3C4043;
+  display:none;
+}
+.meet-self-pip video{
+  width:100%;height:100%;
+  object-fit:cover;
+  transform:scaleX(-1);
+}
+.meet-self-pip .meet-tile-name{
+  font-size:0.7rem;
+  bottom:4px;left:6px;
+  padding:2px 8px;
+}
+
+/* Bottom toolbar */
+.meet-toolbar{
+  display:flex;align-items:center;justify-content:center;
+  padding:12px 0 16px;
+  height:80px;min-height:80px;
+  background:#202124;
+  border-top:1px solid rgba(255,255,255,0.06);
+  gap:12px;
+  position:relative;
+  z-index:10;
+}
+.meet-tool-btn{
+  width:48px;height:48px;
+  border-radius:50%;
+  border:none;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;
+  transition:background 0.2s,transform 0.15s;
+  position:relative;
+}
+.meet-tool-btn:hover{transform:scale(1.08)}
+.meet-tool-btn:active{transform:scale(0.95)}
+.meet-tool-btn.dark{
+  background:#3C4043;
+  color:rgba(255,255,255,0.9);
+}
+.meet-tool-btn.dark:hover{background:#4A4D51}
+.meet-tool-btn.dark.off{
+  background:#EA4335;
+  color:#fff;
+}
+.meet-tool-btn.leave{
+  background:#EA4335;
+  color:#fff;
+  border-radius:24px;
+  width:auto;
+  padding:0 24px;
+  gap:8px;
+  font-family:'Inter',sans-serif;
+  font-size:0.8rem;
+  font-weight:600;
+  letter-spacing:0.02em;
+}
+.meet-tool-btn.leave:hover{background:#D93025}
+.meet-tool-btn svg{
+  width:20px;height:20px;
+  fill:currentColor;
+}
+.meet-tool-tooltip{
+  position:absolute;bottom:56px;
+  left:50%;transform:translateX(-50%);
+  background:rgba(50,50,50,0.95);
+  color:#fff;
+  font-size:0.7rem;font-weight:500;
+  padding:4px 10px;border-radius:4px;
+  white-space:nowrap;pointer-events:none;
+  opacity:0;transition:opacity 0.15s;
+}
+.meet-tool-btn:hover .meet-tool-tooltip{opacity:1}
+
+/* Meet overlays */
+.meet-overlay-msg{
+  position:absolute;
+  z-index:30;
+  animation:meetMsgIn 0.35s var(--ease) both;
+}
+@keyframes meetMsgIn{0%{opacity:0;transform:translate(-50%,-50%) scale(0.9)}100%{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+.meet-toast{
+  position:absolute;bottom:96px;left:50%;transform:translateX(-50%);
+  background:rgba(50,50,50,0.95);
+  color:rgba(255,255,255,0.9);
+  padding:8px 20px;border-radius:8px;
+  font-size:0.82rem;font-weight:400;
+  z-index:25;
+  animation:meetToastIn 0.3s ease both;
+  backdrop-filter:blur(8px);
+}
+@keyframes meetToastIn{0%{opacity:0;transform:translateX(-50%) translateY(10px)}100%{opacity:1;transform:translateX(-50%) translateY(0)}}
+.meet-toast.out{animation:meetToastOut 0.25s ease forwards}
+@keyframes meetToastOut{to{opacity:0;transform:translateX(-50%) translateY(-10px)}}
+
+.meet-caption-bar{
+  position:absolute;bottom:88px;left:50%;transform:translateX(-50%);
+  background:rgba(0,0,0,0.8);
+  color:rgba(255,255,255,0.9);
+  padding:10px 20px;border-radius:8px;
+  font-size:0.82rem;font-weight:400;
+  max-width:70%;text-align:center;
+  z-index:25;
+  line-height:1.6;
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.06);
+}
+
+.meet-conn-warning{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  background:rgba(234,67,53,0.92);
+  color:#fff;
+  padding:12px 28px;border-radius:8px;
+  font-size:0.85rem;font-weight:500;
+  z-index:35;
+  display:flex;align-items:center;gap:8px;
+  box-shadow:0 8px 32px rgba(0,0,0,0.4);
+  backdrop-filter:blur(8px);
+}
+
+/* ══ Sun Snow ══ */
+.sun-snow{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:hidden}
+.sun-snow span{position:absolute;top:-20px;font-size:1.1rem;animation:snowDrift linear infinite;opacity:0.7;user-select:none}
+@keyframes snowDrift{0%{transform:translateY(-20px) rotate(0deg);opacity:0.7}100%{transform:translateY(110vh) rotate(360deg);opacity:0}}
+
+/* ══ Debit Slide ══ */
+.debit-card.slide-in{animation:slideInRight 0.45s var(--ease) both}
+.debit-card.slide-out{animation:slideOutRight 0.3s ease-in forwards}
+
+/* ══ Download Modal ══ */
+.dl-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:9000;display:flex;align-items:center;justify-content:center}
+.dl-modal{background:#fff;border-radius:12px;padding:32px 40px;max-width:380px;box-shadow:var(--s4);text-align:center;font-family:'Nunito',sans-serif}
+.dl-modal h3{font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:12px;color:var(--forest)}
+.dl-modal p{font-size:0.9rem;color:var(--ink-2);margin-bottom:20px;line-height:1.6}
+
+/* ══ Confetti ══ */
+.confetti{position:fixed;width:8px;height:8px;z-index:9999;pointer-events:none;border-radius:2px}
+@keyframes confettiFall{0%{transform:translateY(-10vh) rotate(0deg);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}
+
+/* ══ Flash ══ */
+#flash{position:fixed;inset:0;background:white;z-index:9999;opacity:0;pointer-events:none;transition:opacity 0.1s}
+
+/* ══ Blackout ══ */
+#blackout{position:fixed;inset:0;background:#000;z-index:800;display:none;align-items:center;justify-content:center;flex-direction:column;color:white;font-family:'Cormorant Garamond',serif}
+
+/* ══ CV Document ══ */
+.cv-doc{
+  background:#fff;padding:48px;
+  border:1px solid #E4E4E7;
+  font-family:'Inter',sans-serif;
+  font-size:0.85rem;line-height:1.75;
+  max-width:560px;margin:0 auto;
+  box-shadow:var(--s2);
+}
+.cv-doc h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.1rem;font-weight:600;
+  color:var(--forest);
+  border-bottom:1px solid var(--gold);
+  padding-bottom:6px;margin:20px 0 10px;
+  letter-spacing:0.04em;text-transform:uppercase;
+}
+.cv-doc .cv-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px}
+.cv-doc .cv-avatar{width:80px;height:80px;border-radius:50%;border:2px solid var(--gold)}
+
+/* ══ Life Audit ══ */
+.audit-line{font-family:'Inter',sans-serif;font-size:0.98rem;line-height:2.4;color:var(--ink);font-weight:400}
+.audit-divider{height:0.5px;background:linear-gradient(90deg,var(--gold),var(--forest-light),transparent);margin:32px 0}
+.audit-name{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;color:var(--forest);margin-bottom:10px;letter-spacing:-0.02em}
+
+/* ══ Calendar ══ */
+.cal-card{
+  background:#fff;border-radius:16px;padding:24px 28px;
+  max-width:380px;margin:20px auto;
+  box-shadow:var(--s4);
+  border-top:3px solid #4285F4;
+  font-family:'Inter',sans-serif;font-size:0.88rem;
+}
+.cal-card h4{margin-bottom:10px;font-size:1rem;font-weight:600;color:var(--ink)}
+
+/* ══ Debit Card ══ */
+.debit-card{
+  background:rgba(255,255,255,0.99);
+  border-radius:12px;padding:18px 22px;
+  max-width:310px;
+  box-shadow:var(--s4);
+  border-left:4px solid var(--red);
+  font-family:'Courier New',monospace;font-size:0.78rem;
+  position:fixed;top:60px;right:20px;z-index:9998;
+  line-height:1.8;border:1px solid #FCA5A5;
+  border-left:4px solid var(--red);
+}
+
+/* ══ Loading Bar ══ */
+.load-bar{
+  width:100%;height:3px;
+  background:rgba(0,0,0,0.07);
+  border-radius:3px;overflow:hidden;margin:20px 0;
+}
+.load-fill{
+  height:100%;
+  background:linear-gradient(90deg,var(--gold-light),var(--gold),var(--forest-light),var(--gold));
+  background-size:300% 100%;
+  border-radius:3px;
+  transition:width 0.35s var(--ease);
+  width:0%;
+  animation:shimmer 2.5s linear infinite;
+}
+@keyframes shimmer{0%{background-position:100% 0}100%{background-position:-100% 0}}
+
+/* ══ Dating Profile Card ══ */
+.dating-card{
+  background:#fff;border-radius:20px;padding:32px;
+  box-shadow:var(--s2);text-align:center;margin:20px 0;
+  border:1px solid rgba(210,195,175,0.5);
+}
+.dating-card .tag{
+  display:inline-block;
+  background:var(--bg-alt);
+  padding:4px 12px;border-radius:100px;
+  font-size:0.73rem;margin:3px;
+  font-weight:500;color:var(--ink-2);
+  border:1px solid rgba(210,195,175,0.6);
+  font-family:'Inter',sans-serif;
+}
+
+/* ══ Collab Tag ══ */
+.collab-tag{
+  position:absolute;top:-32px;left:0;
+  background:linear-gradient(135deg,#166534,#15803D);
+  color:#fff;font-family:'Inter',sans-serif;
+  font-size:0.7rem;font-weight:600;padding:5px 13px;
+  border-radius:100px;display:flex;align-items:center;gap:6px;
+  box-shadow:0 4px 12px rgba(21,128,61,0.35);
+  letter-spacing:0.03em;
+}
+.collab-tag .dot{width:6px;height:6px;border-radius:50%;background:#4ADE80;display:inline-block;animation:livePulse 1s infinite}
+@keyframes livePulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.75)}}
+
+/* ══ Calculator ══ */
+.calc-widget{
+  position:fixed;top:80px;right:24px;
+  background:#0F0F0F;
+  border-radius:20px;padding:16px;
+  box-shadow:var(--s4),0 1px 0 rgba(255,255,255,0.04) inset;
+  z-index:900;width:220px;
+  animation:slideInRight 0.45s var(--ease) both;
+  border:1px solid rgba(255,255,255,0.06);
+}
+.calc-screen{
+  background:#071810;
+  color:#86EFAC;
+  font-family:'Courier New',monospace;
+  font-size:1.4rem;padding:14px 16px;
+  border-radius:10px;text-align:right;
+  margin-bottom:10px;min-height:48px;
+  letter-spacing:0.08em;
+}
+.calc-btns{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
+.calc-btns button{
+  padding:10px;border:none;border-radius:8px;
+  font-size:0.9rem;cursor:pointer;
+  background:rgba(255,255,255,0.07);
+  color:rgba(255,255,255,0.85);font-weight:600;
+  transition:background 0.12s;
+}
+.calc-btns button:hover{background:rgba(255,255,255,0.16)}
+.calc-btns button.op{background:rgba(201,150,12,0.9);color:#fff}
+.calc-btns button.op:hover{background:var(--gold)}
+
+/* ══ Keyframes ══ */
+@keyframes bounceIn{0%{transform:scale(0.3);opacity:0}50%{transform:scale(1.06)}75%{transform:scale(0.97)}100%{transform:scale(1);opacity:1}}
+@keyframes sunPulse{from{filter:brightness(1)}to{filter:brightness(1.12)}}
+@keyframes pulse{0%,100%{opacity:0.7}50%{opacity:1}}
+.page-card.no-accent::before{display:none}
+
+/* ══ Grain Overlay (Tier 3 — Ambient) ══ */
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:10000;opacity:0.025;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px}
+
+/* ══ Button Shimmer (Tier 2 — Interaction) ══ */
+.btn-primary::before{content:'';position:absolute;top:0;left:0;width:60%;height:100%;background:linear-gradient(120deg,transparent 20%,rgba(255,255,255,0.1) 50%,transparent 80%);transform:translateX(-120%);animation:shimmerSweep 5s ease-in-out infinite;pointer-events:none;z-index:1}
+@keyframes shimmerSweep{0%,78%,100%{transform:translateX(-120%)}35%,48%{transform:translateX(280%)}}
+
+/* ══ Card Depth (Tier 3 — Ambient) ══ */
+.page-card{transition:box-shadow 0.4s var(--ease),border-color 0.4s var(--ease)}
+
+/* ══ Sun Page Enhanced ══ */
+.sun-card-enhanced{border:none!important;overflow:hidden}
+.sun-card-enhanced::before{content:'';position:absolute;inset:-60%;background:conic-gradient(from 0deg,transparent 0%,rgba(255,255,255,0.18) 10%,transparent 20%,rgba(255,255,255,0.12) 30%,transparent 40%,rgba(255,255,255,0.1) 50%,transparent 60%,rgba(255,255,255,0.15) 70%,transparent 80%,rgba(255,255,255,0.08) 90%,transparent 100%);animation:sunRays 12s linear infinite;width:200%;height:200%;left:-50%;top:-50%}
+.sun-card-enhanced::after{content:'☀️';position:absolute;top:16px;right:24px;font-size:2rem;opacity:0.3;animation:sunFloat 3s ease-in-out infinite alternate;pointer-events:none}
+@keyframes sunRays{to{transform:rotate(360deg)}}
+@keyframes sunFloat{0%{transform:translateY(0) scale(1)}100%{transform:translateY(-8px) scale(1.1)}}
+@keyframes heatWave{0%,100%{filter:brightness(1) saturate(1)}50%{filter:brightness(1.08) saturate(1.15)}}
+.sun-text{font-family:'Gochi Hand',cursive;font-size:2.8rem;color:white;animation:bounceIn 0.6s both;text-shadow:0 4px 24px rgba(0,0,0,0.35);position:relative;z-index:2}
+.sun-sub{font-family:'Gochi Hand',cursive;font-size:1.4rem;color:rgba(255,255,255,0.95);margin-top:16px;text-shadow:0 2px 12px rgba(0,0,0,0.3);position:relative;z-index:2}
+.sun-btn{background:linear-gradient(135deg,#74B9FF,#5DADE2)!important;color:#1a1a2e!important;font-weight:700;box-shadow:0 4px 0 #3498DB,0 8px 24px rgba(93,173,226,0.4)!important;position:relative;z-index:2}
+.sun-btn:hover{box-shadow:0 4px 0 #3498DB,0 12px 36px rgba(93,173,226,0.5)!important}
+.sun-particle{position:absolute;border-radius:50%;pointer-events:none;z-index:1}
+@keyframes particleFloat{0%{transform:translateY(0) scale(1);opacity:0.6}50%{opacity:0.9}100%{transform:translateY(-80px) scale(0);opacity:0}}
+
+/* ══ Pattiche ══ */
+.pattiche-wrap{padding:48px 20px;text-align:center}
+.pattiche-emoji{font-size:5rem;display:block;margin:0 auto 16px;animation:bounceIn 0.6s both}
+.pattiche-title{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:700;color:var(--forest);margin-bottom:12px}
+.pattiche-sub{font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:var(--ink);margin-bottom:8px}
+.pattiche-sub em{font-style:italic;font-weight:700;color:var(--forest)}
+.pattiche-name{font-family:'Inter',sans-serif;font-size:1rem;color:var(--ink-2);letter-spacing:0.06em}
+.pattiche-name strong{color:var(--forest);font-weight:700}
+.pattiche-divider{width:80px;height:2px;background:var(--gold);margin:24px auto;border-radius:2px;opacity:0.5}
+.pattiche-bubble{background:var(--forest);color:white;padding:20px 32px;border-radius:18px;margin:0 auto;max-width:420px;font-family:'Gochi Hand',cursive;font-size:1.35rem;border:3px solid var(--gold);box-shadow:0 8px 32px rgba(22,61,43,0.35);position:relative;line-height:1.7}
+.pattiche-bubble::before{content:'';position:absolute;top:-14px;left:50%;transform:translateX(-50%);border:14px solid transparent;border-bottom-color:var(--gold);border-top:0}
+.pattiche-bubble .hl{color:#FFD700;font-weight:700}
+
+/* ══ April Fools End ══ */
+.april-fools-bg{background:linear-gradient(135deg,#0a2e1a 0%,#163D2B 40%,#1a4a33 70%,#0d3320 100%)!important;min-height:100vh;position:relative;overflow:hidden;padding:60px 40px!important;border:none!important;border-radius:var(--r)!important}
+.april-fools-bg::before{background:none!important;display:none!important}
+.april-fools-bg::after{display:none!important}
+.af-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(201,150,12,0.5);border-radius:100px;padding:8px 24px;font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold-light)}
+.af-badge .bdot{width:6px;height:6px;border-radius:50%;background:var(--gold-light);display:inline-block}
+.af-title{font-family:'Playfair Display',serif;font-size:3.2rem;font-weight:700;color:var(--gold-light);margin:24px 0;text-shadow:0 4px 24px rgba(201,150,12,0.3)}
+.af-emoji{font-size:4.5rem;display:block;margin:0 auto 20px;animation:bounceIn 0.5s both}
+.af-divider{width:60px;height:2px;background:var(--gold);margin:20px auto;border-radius:2px;opacity:0.6}
+.af-line{font-family:'Inter',sans-serif;font-size:1.1rem;color:rgba(255,255,255,0.7);line-height:2;margin:6px 0;opacity:0;transition:opacity 0.8s,transform 0.8s;transform:translateY(10px)}
+.af-line.vis{opacity:1;transform:translateY(0)}
+.af-line strong{color:var(--gold-light);font-weight:700}
+.af-line em{color:var(--gold-light);font-style:normal;font-weight:600}
+.af-close{font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:28px}
+.af-close strong{color:var(--gold-light)}
+.af-footer{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:20px}
+.af-footer strong{color:rgba(255,255,255,0.65)}
+.af-confetti{position:absolute;border-radius:2px;pointer-events:none;opacity:0.65}
+@keyframes afDrift{0%{transform:translateY(-20px) rotate(0deg);opacity:0.7}100%{transform:translateY(100vh) rotate(720deg);opacity:0}}
+
+/* ══ Page 19 Message Enhanced ══ */
+.msg-page-wrap{padding:80px 20px;max-width:520px;margin:0 auto;position:relative}
+.msg-page-wrap::before{content:'';position:absolute;top:0;left:-40px;width:2px;height:100%;background:linear-gradient(180deg,var(--gold),var(--forest-light),transparent);opacity:0.3}
+
+/* ══ Page 19a CV Enhanced ══ */
+.cv-render-enhanced{animation:cardIn 0.45s var(--ease) both;border-top:3px solid var(--gold)!important}
+
+/* ══ Cinematic Splash Screen ══ */
+#splash{
+  position:fixed;inset:0;z-index:850;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+#splash .splash-bg{
+  position:absolute;inset:0;
+  background:linear-gradient(145deg,#0A1F14 0%,#0D2B1C 25%,#163D2B 50%,#0F2E1F 75%,#091A10 100%);
+}
+#splash .splash-bg::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 60% 40% at 30% 20%,rgba(201,150,12,0.08),transparent),
+    radial-gradient(ellipse 50% 50% at 70% 80%,rgba(201,150,12,0.05),transparent);
+}
+#splash .splash-bg::after{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:200px;opacity:0.04;
+}
+#splash .splash-particles{
+  position:absolute;inset:0;pointer-events:none;overflow:hidden;
+}
+#splash .splash-particle{
+  position:absolute;border-radius:50%;pointer-events:none;
+  background:radial-gradient(circle,rgba(244,200,66,0.6),rgba(201,150,12,0.1));
+  animation:splashParticleFloat linear infinite;
+}
+@keyframes splashParticleFloat{
+  0%{transform:translateY(100vh) scale(0);opacity:0}
+  10%{opacity:1}
+  90%{opacity:0.8}
+  100%{transform:translateY(-20vh) scale(1);opacity:0}
+}
+#splash .splash-content{
+  position:relative;z-index:2;
+  text-align:center;
+  max-width:700px;
+  padding:0 32px;
+}
+#splash .splash-line-top{
+  width:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold-light),transparent);
+  margin:0 auto 40px;
+  transition:width 1.5s cubic-bezier(0.16,1,0.3,1);
+}
+#splash .splash-line-top.active{width:240px}
+#splash .splash-est{
+  font-family:'Inter',sans-serif;
+  font-size:0.65rem;font-weight:600;
+  letter-spacing:0.35em;text-transform:uppercase;
+  color:rgba(244,200,66,0.5);
+  margin-bottom:28px;
+  opacity:0;transform:translateY(15px);
+  transition:opacity 0.8s ease 0.3s,transform 0.8s ease 0.3s;
+}
+#splash .splash-est.active{opacity:1;transform:translateY(0)}
+#splash .splash-title-line{
+  overflow:hidden;
+  margin:0;
+}
+#splash .splash-title-word{
+  display:inline-block;
+  font-family:'Playfair Display',serif;
+  font-weight:900;
+  font-size:5.5rem;
+  line-height:1.05;
+  letter-spacing:-0.03em;
+  color:transparent;
+  background:linear-gradient(135deg,#F4C842 0%,#E5B93C 30%,#D4A832 50%,#F4C842 70%,#FFE17D 100%);
+  background-clip:text;-webkit-background-clip:text;
+  filter:drop-shadow(0 4px 30px rgba(201,150,12,0.25));
+  transform:translateY(110%);
+  transition:transform 0.9s cubic-bezier(0.16,1,0.3,1);
+}
+#splash .splash-title-word.active{transform:translateY(0)}
+#splash .splash-title-italic{
+  font-style:italic;
+  font-weight:700;
+  font-size:4.8rem;
+  color:transparent;
+  background:linear-gradient(135deg,rgba(244,200,66,0.85),rgba(255,225,125,0.95));
+  background-clip:text;-webkit-background-clip:text;
+}
+#splash .splash-line-bottom{
+  width:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold-light),transparent);
+  margin:36px auto 0;
+  transition:width 1.5s cubic-bezier(0.16,1,0.3,1) 0.8s;
+}
+#splash .splash-line-bottom.active{width:140px}
+#splash .splash-tagline{
+  font-family:'DM Serif Display',serif;
+  font-size:1rem;
+  font-style:italic;
+  color:rgba(244,200,66,0.4);
+  margin-top:20px;
+  letter-spacing:0.06em;
+  opacity:0;transform:translateY(10px);
+  transition:opacity 1s ease 1.2s,transform 1s ease 1.2s;
+}
+#splash .splash-tagline.active{opacity:1;transform:translateY(0)}
+#splash .splash-vignette{
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,0.5) 100%);
+  pointer-events:none;
+}
+#splash.fade-out{
+  animation:splashFadeOut 1.2s ease-in-out forwards;
+}
+@keyframes splashFadeOut{
+  0%{opacity:1;filter:blur(0)}
+  60%{opacity:0.6;filter:blur(2px)}
+  100%{opacity:0;filter:blur(8px)}
+}
+@media(max-width:720px){
+  #splash .splash-title-word{font-size:3.2rem}
+  #splash .splash-title-italic{font-size:2.8rem}
+}
+
+/* ══ Page 3: Welcome Transition ══ */
+.welcome-page{
+  position:relative;
+  min-height:80vh;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;
+  background:linear-gradient(145deg,#0A1F14 0%,#0D2B1C 30%,#163D2B 55%,#0F2E1F 80%,#091A10 100%)!important;
+  border:none!important;
+  overflow:hidden;
+  padding:80px 48px!important;
+}
+.welcome-page::before{display:none!important}
+.welcome-page::after{display:none!important}
+.welcome-page .welcome-vignette{
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse at center,transparent 30%,rgba(0,0,0,0.45) 100%);
+  pointer-events:none;
+}
+.welcome-page .welcome-grain{
+  position:absolute;inset:0;pointer-events:none;opacity:0.03;
+  background:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:200px;
+}
+.welcome-page .welcome-particles{
+  position:absolute;inset:0;pointer-events:none;overflow:hidden;
+}
+.welcome-page .w-particle{
+  position:absolute;border-radius:50%;
+  background:radial-gradient(circle,rgba(244,200,66,0.5),rgba(201,150,12,0.05));
+  animation:wParticleFloat linear infinite;
+}
+@keyframes wParticleFloat{
+  0%{transform:translateY(100%) scale(0);opacity:0}
+  15%{opacity:0.7}
+  85%{opacity:0.5}
+  100%{transform:translateY(-100vh) scale(1);opacity:0}
+}
+.welcome-content{
+  position:relative;z-index:2;
+  max-width:540px;
+}
+.welcome-line{
+  width:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold-light),transparent);
+  margin:0 auto;
+  transition:width 1.8s cubic-bezier(0.16,1,0.3,1);
+}
+.welcome-line.active{width:200px}
+.welcome-avatar{
+  width:100px;height:100px;
+  border-radius:50%;
+  border:3px solid var(--gold);
+  box-shadow:0 0 0 8px rgba(201,150,12,0.1),0 0 0 16px rgba(201,150,12,0.04),0 8px 40px rgba(0,0,0,0.4);
+  margin:0 auto 28px;
+  opacity:0;transform:scale(0.8);
+  transition:opacity 0.8s ease,transform 0.8s cubic-bezier(0.16,1,0.3,1);
+  object-fit:cover;
+}
+.welcome-avatar.active{opacity:1;transform:scale(1)}
+.welcome-label{
+  font-family:'Inter',sans-serif;
+  font-size:0.6rem;font-weight:600;
+  letter-spacing:0.4em;text-transform:uppercase;
+  color:rgba(244,200,66,0.4);
+  margin-bottom:20px;
+  opacity:0;transform:translateY(12px);
+  transition:opacity 0.8s ease,transform 0.8s ease;
+}
+.welcome-label.active{opacity:1;transform:translateY(0)}
+.welcome-title{
+  font-family:'Playfair Display',serif;
+  font-weight:800;
+  font-size:3rem;
+  line-height:1.15;
+  letter-spacing:-0.02em;
+  color:transparent;
+  background:linear-gradient(135deg,#F4C842 0%,#E5B93C 40%,#FFE17D 70%,#F4C842 100%);
+  background-clip:text;-webkit-background-clip:text;
+  filter:drop-shadow(0 3px 20px rgba(201,150,12,0.2));
+  margin-bottom:8px;
+  opacity:0;transform:translateY(20px);
+  transition:opacity 1s ease,transform 1s cubic-bezier(0.16,1,0.3,1);
+}
+.welcome-title.active{opacity:1;transform:translateY(0)}
+.welcome-name{
+  font-family:'Playfair Display',serif;
+  font-weight:700;
+  font-style:italic;
+  font-size:2.4rem;
+  line-height:1.2;
+  color:rgba(255,255,255,0.85);
+  margin-bottom:32px;
+  opacity:0;transform:translateY(20px);
+  transition:opacity 1s ease 0.2s,transform 1s cubic-bezier(0.16,1,0.3,1) 0.2s;
+}
+.welcome-name.active{opacity:1;transform:translateY(0)}
+.welcome-line-bottom{
+  width:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(244,200,66,0.3),transparent);
+  margin:0 auto 24px;
+  transition:width 1.5s cubic-bezier(0.16,1,0.3,1) 0.5s;
+}
+.welcome-line-bottom.active{width:120px}
+.welcome-tagline{
+  font-family:'DM Serif Display',serif;
+  font-size:0.9rem;
+  font-style:italic;
+  color:rgba(244,200,66,0.35);
+  letter-spacing:0.04em;
+  opacity:0;transform:translateY(8px);
+  transition:opacity 1s ease 0.6s,transform 1s ease 0.6s;
+}
+.welcome-tagline.active{opacity:1;transform:translateY(0)}
+@media(max-width:720px){
+  .welcome-page{padding:48px 24px!important;min-height:70vh}
+  .welcome-title{font-size:2rem}
+  .welcome-name{font-size:1.6rem}
+  .welcome-avatar{width:72px;height:72px}
+}
+
+</style>
+</head>
+<body>
+
+<!-- AUDIO -->
+<!-- AUDIO SLOT 1: Welcome — ponnappan.mp3 -->
+<audio id="audio-1" src="ponnappan.mp3" preload="auto"></audio>
+<!-- AUDIO SLOT 2: Name confirmed — keri_vaada_makkale.mp3 -->
+<audio id="audio-2" src="keri_vaada_makkale.mp3" preload="auto"></audio>
+<!-- AUDIO SLOT 3: Avatar YES click — pokkiri_raja.mp3 (renamed from original) -->
+<audio id="audio-3" src="pokkiri_raja.mp3" preload="auto"></audio>
+<!-- AUDIO SLOT 4: Soft skills BGM — place softskills_bgm.mp3 in folder -->
+<audio id="audio-4" src="softskills_bgm.mp3" preload="auto"></audio>
+<!-- AUDIO SLOT 5: Glitch sting — place glitch_sting.mp3 in folder -->
+<audio id="audio-5" src="glitch_sting.mp3" preload="auto"></audio>
+<!-- AUDIO SLOT 6: End credits — place end_credits.mp3 in folder -->
+<audio id="audio-6" src="end_credits.mp3" preload="auto"></audio>
+<!-- AUDIO: Interview muffled voice — place muffled_voice.mp3 in folder -->
+<audio id="audio-interview" src="muffled_voice.mp3" preload="auto"></audio>
+<!-- BG: Ambient loop — place carnatic_bg.mp3 in folder -->
+<audio id="audio-bg" src="carnatic_bg.mp3" preload="auto" loop></audio>
+
+<!-- PROGRESS -->
+<div id="progress"><div id="progress-fill"></div></div>
+
+<!-- RECORDING BANNER -->
+<div id="rec-banner">🔴 &nbsp; This session is being recorded for quality and training purposes.</div>
+
+<!-- FLASH -->
+<div id="flash"></div>
+
+<!-- BLACKOUT -->
+<div id="blackout"></div>
+
+<div id="splash" class="hidden">
+  <div class="splash-bg"></div>
+  <div class="splash-particles" id="splash-particles"></div>
+  <div class="splash-vignette"></div>
+  <div class="splash-content">
+    <div class="splash-line-top" id="splash-line-top"></div>
+    <div class="splash-est" id="splash-est">Est. 2003 · Kerala, India</div>
+    <div class="splash-title-line">
+      <span class="splash-title-word" id="splash-word-1">Thangappan's</span>
+    </div>
+    <div class="splash-title-line">
+      <span class="splash-title-word splash-title-italic" id="splash-word-2">Career Consulting</span>
+    </div>
+    <div class="splash-line-bottom" id="splash-line-bottom"></div>
+    <div class="splash-tagline" id="splash-tagline">Professional CVs · Personal Touch · No Refunds</div>
+  </div>
+</div>
+
+<!-- THANGAPPAN AVATAR -->
+<div id="thang-avatar">
+  <div class="thang-card">
+    <div class="thang-face" id="thang-face-el"><img src="Thangappan1.jpeg" alt="Thangappan" id="thang-img"></div>
+  </div>
+  <div class="thang-name-tag">Thangappan</div>
+</div>
+
+<!-- FAKE MEET (hidden initially) -->
+<div id="fake-meet" class="hidden"></div>
+
+<!-- ==================== PAGES ==================== -->
+
+<!-- PAGE 1: LANDING -->
+<div class="page" id="page-1">
+<div class="page-card" style="text-align:center;padding:72px 64px">
+  <!-- Brand stamp -->
+  <div style="display:inline-flex;align-items:center;gap:10px;margin-bottom:36px">
+    <div style="width:2px;height:32px;background:var(--gold)"></div>
+    <span style="font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--forest-light)">Est. 2003 &nbsp;·&nbsp; Kerala, India</span>
+    <div style="width:2px;height:32px;background:var(--gold)"></div>
+  </div>
+  <!-- Main title -->
+  <h1 style="font-family:'Cormorant Garamond',serif;font-size:3.6rem;font-weight:700;color:var(--forest);line-height:1.05;letter-spacing:-0.03em;margin-bottom:12px">Thangappan's<br><em style="font-style:italic;color:var(--gold)">Career Consulting</em></h1>
+  <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--ink-2);margin-bottom:6px">Professional CVs. Personal Touch. No Refunds.</p>
+  <!-- Stats row -->
+  <div style="display:flex;justify-content:center;gap:32px;margin:28px 0;padding:20px 0;border-top:0.5px solid var(--line);border-bottom:0.5px solid var(--line)">
+    <div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--forest)">10,000+</div>
+      <div style="font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-3)">CVs Built</div>
+    </div>
+    <div style="width:0.5px;background:var(--line)"></div>
+    <div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--forest)">0</div>
+      <div style="font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-3)">Refunds Given</div>
+    </div>
+    <div style="width:0.5px;background:var(--line)"></div>
+    <div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--forest)">★★★★★</div>
+      <div style="font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-3)">Self Rated</div>
+    </div>
+  </div>
+  <div class="thang-box hidden" id="p1-box" style="text-align:left"></div>
+  <button class="btn btn-primary btn-full hidden" id="p1-start" onclick="startConsultation()" style="margin-top:8px;font-size:0.8rem;letter-spacing:0.2em">BEGIN CONSULTATION &nbsp;→</button>
+</div>
+</div>
+
+<!-- PAGE 2: NAME -->
+<div class="page hidden" id="page-2">
+<div class="page-card">
+  <div class="section-label">Section 01 — Identity</div>
+  <h2 class="page-title">Your Full Name</h2>
+  <p class="page-subtitle">As it appears officially. Not your nickname. Not your Instagram handle.</p>
+  <div id="p2-step1">
+    <input type="text" id="p2-name" placeholder="Enter your full name...">
+    <button class="btn btn-primary" id="p2-ok" onclick="p2Submit()">OK ✓</button>
+  </div>
+  <div class="thang-box hidden" id="p2-box"></div>
+  <div id="p2-confirm" class="hidden" style="margin-top:12px"></div>
+  <div class="thang-box hidden" id="p2-box2"></div>
+  <div id="p2-retry" class="hidden">
+    <input type="text" id="p2-name2" placeholder="Re-enter your name...">
+    <button class="btn btn-primary" id="p2-ok2" onclick="p2Retry()">OK, this is correct</button>
+  </div>
+  <button class="btn btn-primary btn-full hidden" id="p2-next" onclick="goPage(3)" style="margin-top:16px">Next →</button>
+</div>
+</div>
+
+<!-- PAGE 3: WELCOME TRANSITION -->
+<div class="page hidden" id="page-3">
+<div class="page-card welcome-page">
+  <div class="welcome-vignette"></div>
+  <div class="welcome-grain"></div>
+  <div class="welcome-particles" id="p3-particles"></div>
+  <div class="welcome-content">
+    <div class="welcome-line" id="p3-line-top"></div>
+    <div style="margin-top:32px">
+      <img src="Thangappan1.jpeg" class="welcome-avatar" id="p3-avatar" alt="Thangappan">
+    </div>
+    <div class="welcome-label" id="p3-label">Your Consultation Begins</div>
+    <h2 class="welcome-title" id="p3-title">Varanam Varanam</h2>
+    <p class="welcome-name" id="p3-name"></p>
+    <div class="welcome-line-bottom" id="p3-line-bottom"></div>
+    <p class="welcome-tagline" id="p3-tagline">Thangappan & Associates · Since 2003</p>
+  </div>
+</div>
+</div>
+
+<!-- PAGE 4: PHYSICAL DESCRIPTION -->
+<div class="page hidden" id="page-4">
+<div class="page-card">
+  <div class="section-label">Step 2: Professional Photo</div>
+  <h2 class="page-title">Physical Description</h2>
+  <p class="page-subtitle">A headshot improves CV success by 40%.<sup style="font-size:0.6rem">*</sup></p>
+  <p class="fine-print">* completely made up</p>
+  <div class="thang-box" id="p4-box1"></div>
+  <div id="p4-inputs" class="hidden">
+    <div class="grid-2">
+      <div><label class="input-label">Height (cm)</label><input type="number" id="p4-height" placeholder="170"></div>
+      <div><label class="input-label">Weight (kg)</label><input type="number" id="p4-weight" placeholder="65"></div>
+    </div>
+    <label class="input-label" style="margin-top:8px">Gender</label>
+    <div class="choice-row" id="p4-gender">
+      <div class="choice-card" data-val="male" onclick="selChoice(this)">Male</div>
+      <div class="choice-card" data-val="female" onclick="selChoice(this)">Female</div>
+      <div class="choice-card" data-val="other" onclick="selChoice(this)">Other</div>
+      <div class="choice-card" data-val="other" onclick="selChoice(this)">thangappan doesn't judge 🏳️‍🌈</div>
+    </div>
+    <p style="font-family:'Gochi Hand',cursive;font-size:1.15rem;color:var(--forest-mid);font-style:italic;margin:10px 0 14px">Yes, I know this isn't normal CV stuff. I just want to know. Okay? 🥰 Also — you can use ChatGPT to figure out your height and weight if you forgot. 😏</p>
+    <button class="btn btn-primary btn-full" id="p4-ok1" onclick="p4Submit()">OK, here's my data</button>
+  </div>
+  <div class="thang-box hidden" id="p4-bmi-box"></div>
+  <div id="p4-snack-section" class="hidden">
+    <label class="input-label">Your favourite snack/food? (this is for the cv obviously 🙂)</label>
+    <input type="text" id="p4-snack" placeholder="Biriyani, chips, etc...">
+    <button class="btn btn-primary" id="p4-snack-ok" onclick="p4SnackSubmit()">OK 🍽️</button>
+  </div>
+  <div class="thang-box hidden" id="p4-snack-box"></div>
+  <div id="p4-avatar-section" class="hidden" style="text-align:center;margin-top:20px">
+    <p style="font-family:'Gochi Hand',cursive;font-size:1.4rem">Is this you? 🤔</p>
+    <img id="p4-avatar-img" class="avatar-frame" alt="Your avatar">
+    <div style="display:flex;gap:12px;justify-content:center;margin-top:16px">
+      <button class="btn btn-primary" onclick="p4AvatarYes()">YES 😌</button>
+      <button class="btn btn-ghost" onclick="p4AvatarNo()">NO WAY 😤</button>
+    </div>
+  </div>
+  <div class="thang-box hidden" id="p4-final-box"></div>
+  <button class="btn btn-primary btn-full hidden" id="p4-next" onclick="goPage(5)" style="margin-top:16px">Next →</button>
+</div>
+</div>
+
+<!-- PAGE 5-20 placeholders will be added -->
+<!-- PAGE 5: CONTACT DETAILS -->
+<div class="page hidden" id="page-5">
+<div class="page-card">
+  <div class="section-label">Section 03 — Contact Details</div>
+  <h2 class="page-title">How to Reach You</h2>
+  <label class="input-label">Phone Number</label>
+  <input type="tel" id="p5-phone" placeholder="Your 10-digit number...">
+  <button class="btn btn-primary" id="p5-phone-ok" onclick="p5PhoneSubmit()">OK</button>
+  <div class="thang-box hidden" id="p5-phone-box"></div>
+  <div id="p5-email-section" class="hidden">
+    <label class="input-label">Email Address</label>
+    <input type="email" id="p5-email" placeholder="you@email.com">
+    <button class="btn btn-primary" id="p5-email-ok" onclick="p5EmailSubmit()">OK</button>
+    <div class="thang-box hidden" id="p5-email-box"></div>
+  </div>
+  <div id="p5-city-section" class="hidden">
+    <label class="input-label">City</label>
+    <input type="text" id="p5-city" placeholder="Where do you live?">
+    <button class="btn btn-primary" id="p5-city-ok" onclick="p5CitySubmit()">OK</button>
+    <div class="thang-box hidden" id="p5-city-box"></div>
+  </div>
+  <button class="btn btn-primary btn-full hidden" id="p5-next" onclick="goPage(6)" style="margin-top:16px">Next →</button>
+</div>
+</div>
+
+<!-- PAGE 6: EDUCATION -->
+<div class="page hidden" id="page-6">
+<div class="page-card">
+  <div class="section-label">Section 04 — Academic Credentials</div>
+  <h2 class="page-title">Education</h2>
+  <label class="input-label">Qualification</label>
+  <select id="p6-qual"><option value="">Select...</option><option>School</option><option>Diploma</option><option>Degree</option><option>Masters</option><option>PhD</option><option>Dropout (with respect)</option></select>
+  <label class="input-label">Institution</label>
+  <input type="text" id="p6-inst" placeholder="College / University name">
+  <label class="input-label">Year</label>
+  <input type="number" id="p6-year" placeholder="2020">
+  <label class="input-label">Grade / CGPA (%)</label>
+  <input type="number" id="p6-grade" placeholder="75">
+  <button class="btn btn-primary btn-full" id="p6-ok" onclick="p6Submit()">OK, that's my education</button>
+  <div class="thang-box hidden" id="p6-typing"></div>
+  <div class="thang-box hidden" id="p6-box"></div>
+  <div id="p6-math" class="hidden" style="margin-top:16px">
+    <div class="thang-box" id="p6-mathq">wait — did you study any of this? 🤔</div>
+    <div class="choice-row" id="p6-math-choice">
+      <div class="choice-card" data-val="algebra" onclick="p6MathPick(this)">Algebra 📐</div>
+      <div class="choice-card" data-val="trig" onclick="p6MathPick(this)">Calculus/Trig 📏</div>
+      <div class="choice-card" data-val="neither" onclick="p6MathPick(this)">Neither 😭</div>
+    </div>
+  </div>
+  <div id="p6-math-input" class="hidden">
+    <label class="input-label" id="p6-math-label"></label>
+    <input type="text" id="p6-math-ans" placeholder="Your answer...">
+    <button class="btn btn-primary" onclick="p6MathSubmit()">Submit Answer</button>
+  </div>
+  <div class="thang-box hidden" id="p6-math-box"></div>
+  <button class="btn btn-primary btn-full hidden" id="p6-next" onclick="goPage(7)" style="margin-top:16px">Next →</button>
+</div>
+</div>
+
+<!-- PAGE 7: WORK EXPERIENCE -->
+<div class="page hidden" id="page-7">
+<div class="page-card">
+  <div class="section-label">Section 05 — Work</div>
+  <h2 class="page-title">Work Experience</h2>
+  <div class="choice-row" id="p7-choice">
+    <div class="choice-card" data-val="yes" onclick="p7Pick(this)">Yes, a lot</div>
+    <div class="choice-card" data-val="some" onclick="p7Pick(this)">Some</div>
+    <div class="choice-card" data-val="fresher" onclick="p7Pick(this)">Fresher/None</div>
+  </div>
+  <div class="thang-box hidden" id="p7-box1"></div>
+  <div id="p7-inputs" class="hidden"></div>
+  <div class="thang-box hidden" id="p7-box2"></div>
+  <button class="btn btn-primary btn-full hidden" id="p7-next" onclick="goPage(8)" style="margin-top:16px">Next →</button>
+</div>
+</div>
+
+<!-- PAGE 8: SKILLS (In Spanish) -->
+<div class="page hidden" id="page-8">
+<div class="page-card">
+  <div class="section-label">Paso 8: Habilidades</div>
+  <p class="page-subtitle">(Step 8: Skills)</p>
+  <div class="thang-box hidden" id="p8-box1"></div>
+  <div id="p8-choice" class="hidden">
+    <div class="choice-row">
+      <div class="choice-card" data-val="si" onclick="p8Pick('si')">Sí 💪</div>
+      <div class="choice-card" data-val="no" onclick="p8Pick('no')">I don't understand 🤷</div>
+    </div>
+  </div>
+  <div class="thang-box hidden" id="p8-box2"></div>
+  <div id="p8-skills-wrap" class="hidden" style="position:relative;margin-top:12px">
+    <input type="text" id="p8-skills" placeholder="list your skills...">
+    <button class="btn btn-primary btn-full" id="p8-ok" onclick="p8Submit()">OK, those are my skills</button>
+  </div>
+  <div class="thang-box hidden" id="p8-box3"></div>
+  <button class="btn btn-primary btn-full hidden" id="p8-next" onclick="goPage(9)" style="margin-top:16px">Next →</button>
+</div>
+</div>
+
+<!-- PAGE 9: HIDDEN SKILLS -->
+<div class="page hidden" id="page-9">
+<div class="page-card">
+  <div class="section-label">Section 06 — Classified</div>
+  <h2 class="page-title">Hidden Skills</h2>
+  <div class="thang-box" id="p9-box1"></div>
+  <div id="p9-input-wrap" class="hidden">
+    <input type="password" id="p9-skills" placeholder="Type your hidden skill..." style="font-size:1rem">
+    <button class="btn btn-ghost" id="p9-show" onclick="p9ShowHint()" style="margin-bottom:12px">👁 Show what I'm typing</button>
+    <div class="thang-box hidden" id="p9-hint"></div>
+    <button class="btn btn-primary btn-full" id="p9-ok" onclick="p9Submit()">Submit Hidden Skill 🔒</button>
+  </div>
+  <div class="thang-box hidden" id="p9-box2"></div>
+  <button class="btn btn-primary btn-full hidden" id="p9-next" onclick="goPage('9.5')" style="margin-top:16px">Next →</button>
+</div>
+</div>
+<!-- PAGE 9.5: INTERVIEW SEQUENCE -->
+<div class="page hidden" id="page-9.5">
+<div class="page-card" id="p95-card">
+  <div class="thang-box hidden" id="p95-box"></div>
+  <div id="p95-lines" style="margin-top:16px"></div>
+  <button class="btn btn-saffron btn-full hidden" id="p95-join" onclick="startInterview()" style="margin-top:16px">JOIN INTERVIEW →</button>
+  <p class="fine-print hidden" id="p95-fine">by joining you agree to Thangappan's T&amp;C (47 pages, unreadable, binding)</p>
+  <div id="p95-progress" class="hidden" style="margin-top:16px;font-family:'Nunito',sans-serif;font-size:0.9rem"></div>
+</div>
+<div id="p95-post-meet" class="hidden">
+  <div class="thang-box hidden" id="p95-post-box"></div>
+  <div id="p95-cal" class="hidden"></div>
+</div>
+</div>
+
+<!-- PAGE 10: THE SUN -->
+<div class="page hidden" id="page-10">
+<div class="sun-snow" id="sun-snow-container"></div>
+<div class="page-card sun-card-enhanced" style="min-height:60vh;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at center,#FFD700 0%,#FF8C00 40%,#FF4500 80%,#E8350D 100%);animation:heatWave 3s ease-in-out infinite;border-radius:var(--r);position:relative;z-index:1">
+  <div style="position:relative;z-index:2">
+    <p style="font-size:4rem;margin-bottom:8px;animation:sunFloat 3s ease-in-out infinite alternate">☀️</p>
+    <p class="sun-text">u landed on the sun</p>
+    <p id="p10-sub" class="hidden sun-sub">... no worries. we will keep you in the fridge 😉</p>
+    <button class="btn sun-btn hidden" id="p10-btn" onclick="goPage(11)" style="margin-top:28px;padding:14px 36px">Way to Fridge 🥶</button>
+  </div>
+  <div id="sun-particles" style="position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden"></div>
+</div>
+</div>
+
+<!-- PAGE 11: RELATIONSHIP STATUS (The Fridge) -->
+<div class="page hidden" id="page-11">
+<div class="page-card" style="background:linear-gradient(135deg,#EBF5FB,#AED6F1,#2E86C1);box-shadow:0 0 0 2px rgba(174,214,241,0.5),var(--shadow-md);border:1px solid rgba(174,214,241,0.8)">
+  <div class="section-label" style="color:#2E86C1">Section 07 — Personal</div>
+  <h2 class="page-title" style="color:#1A5276">Relationship Status</h2>
+  <div class="thang-box" id="p11-intro"></div>
+  <div class="choice-row" id="p11-choice">
+    <div class="choice-card" data-val="committed" onclick="p11Pick('committed')">I have a bf/gf 💑</div>
+    <div class="choice-card" data-val="solo" onclick="p11Pick('solo')">I'm flying solo ✈️</div>
+    <div class="choice-card" data-val="complicated" onclick="p11Pick('complicated')">It's neither / complicated 🤷</div>
+  </div>
+  <div class="thang-box hidden" id="p11-box1"></div>
+  <div id="p11-solo" class="hidden"></div>
+  <div id="p11-committed" class="hidden"></div>
+  <div class="thang-box hidden" id="p11-box2"></div>
+  <div id="p11-dating-advice" class="hidden"></div>
+  <div id="p11-rashi-section" class="hidden"></div>
+  <div class="thang-box hidden" id="p11-box3"></div>
+  <button class="btn btn-primary btn-full hidden" id="p11-next" onclick="goPage(12)" style="margin-top:16px">Next →</button>
+</div>
+<div id="p11-snowflakes"></div>
+</div>
+
+<!-- PAGE 11a: PREFERENCES (Solo Path) -->
+<div class="page hidden" id="page-11a">
+<div class="page-card">
+  <h2 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--forest);margin-bottom:6px">Let's Fix This. Tell Thangappan What You're Looking For.</h2>
+  <p style="font-family:'Nunito',sans-serif;font-style:italic;font-size:0.9rem;color:var(--ink-2);margin-bottom:20px">For research purposes. Definitely not for your CV.</p>
+  <div class="thang-box" id="p11a-box"></div>
+  <div id="p11a-inputs" class="hidden">
+    <label class="input-label">Type of person</label>
+    <input type="text" id="p11a-type" placeholder="Describe in one line">
+    <label class="input-label">Preferred looks</label>
+    <input type="text" id="p11a-looks" placeholder="Be honest. Thangappan won't judge.">
+    <label class="input-label">Preferred dressing style</label>
+    <input type="text" id="p11a-dress" placeholder="Traditional? Casual? Doesn't matter?">
+    <label class="input-label">Anything else important?</label>
+    <input type="text" id="p11a-other" placeholder="Personality, habits, whatever...">
+    <button class="btn btn-primary btn-full" id="p11a-ok" onclick="p11aSubmit()">Continue 😌</button>
+  </div>
+  <div class="thang-box hidden" id="p11a-box2"></div>
+</div>
+</div>
+
+<!-- PAGE 11b: DATING ADVICE (Solo Path) -->
+<div class="page hidden" id="page-11b">
+<div class="page-card" style="background:linear-gradient(135deg,#EBF5FB,#AED6F1,#2E86C1);border:1px solid rgba(174,214,241,0.8)">
+  <div class="section-label" style="color:#2E86C1">Dating Consultation</div>
+  <h2 class="page-title" style="color:#1A5276">Thangappan's Advice</h2>
+  <div id="p11b-solo-card"></div>
+  <div class="thang-box hidden" id="p11b-box"></div>
+  <div id="p11b-advice"></div>
+  <div id="p11b-final" class="hidden" style="text-align:center;margin-top:20px">
+    <div class="thang-box" id="p11b-final-box" style="text-align:center"></div>
+    <button class="btn btn-ghost hidden" id="p11b-exit" onclick="goPage(12)" style="margin-top:12px">Exit 🚪</button>
+  </div>
+</div>
+</div>
+
+<!-- PAGE 11c: PARTNER DETAILS (Committed Path) -->
+<div class="page hidden" id="page-11c">
+<div class="page-card">
+  <h2 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--forest);margin-bottom:6px">Tell Thangappan About Them.</h2>
+  <p style="font-family:'Nunito',sans-serif;font-size:0.9rem;color:var(--ink-2);margin-bottom:16px">This is very important. For the CV.</p>
+  <div class="thang-box" id="p11c-box1"></div>
+  <div id="p11c-inputs" class="hidden">
+    <label class="input-label">Their favourite colour</label>
+    <div class="grid-2"><input type="color" id="p11c-color" value="#E63946" style="width:100%;height:50px;border-radius:var(--r-sm);cursor:pointer"><input type="text" id="p11c-color-name" placeholder="Or type a name..."></div>
+    <label class="input-label">Their favourite food</label>
+    <input type="text" id="p11c-food" placeholder="What do they love eating?">
+    <label class="input-label">Their dream destination</label>
+    <input type="text" id="p11c-dest" placeholder="Where do they want to go?">
+    <label class="input-label">Your dream wedding location</label>
+    <input type="text" id="p11c-wedding" placeholder="Beach? Temple? Court?">
+    <label class="input-label">How long have you been together?</label>
+    <input type="text" id="p11c-duration" placeholder="6 months, 2 years...">
+    <button class="btn btn-primary btn-full" id="p11c-ok" onclick="p11cSubmit()">Next 😌</button>
+  </div>
+  <div id="p11c-reveal" class="hidden" style="text-align:center;margin-top:20px"></div>
+</div>
+</div>
+
+<!-- PAGE 12: FAVOURITE COLOUR -->
+<div class="page hidden" id="page-12">
+<div class="page-card">
+  <div class="section-label">Section 08 — Aesthetics</div>
+  <h2 class="page-title">Favourite Colour</h2>
+  <div class="thang-box" id="p12-intro"></div>
+  <div id="p12-inputs" class="hidden">
+    <label class="input-label">Pick your colour</label>
+    <div class="grid-2">
+      <input type="color" id="p12-picker" value="#52B788" style="width:100%;height:50px;border:2px solid var(--cream-dark);border-radius:var(--radius-sm);cursor:pointer">
+      <input type="text" id="p12-name" placeholder="or type a name...">
+    </div>
+    <button class="btn btn-saffron btn-full" id="p12-ok" onclick="p12Submit()" style="margin-top:12px">OK, that's my colour 🎨</button>
+  </div>
+  <div id="p12-reveal" class="hidden" style="text-align:center;margin-top:20px">
+    <div id="p12-swatch" style="width:80px;height:80px;border-radius:12px;margin:12px auto;border:3px solid var(--cream-dark)"></div>
+    <div style="display:flex;gap:12px;justify-content:center">
+      <button class="btn btn-primary" onclick="p12Yes()">YES 😊</button>
+      <button class="btn btn-ghost" id="p12-no-btn" onclick="p12No()">NO, mine was different</button>
+    </div>
+  </div>
+  <div class="thang-box hidden" id="p12-box"></div>
+  <button class="btn btn-primary btn-full hidden" id="p12-next" onclick="goPage(13)" style="margin-top:16px">Next →</button>
+</div>
+</div>
+
+<!-- PAGE 13: REFERENCE -->
+<div class="page hidden" id="page-13">
+<div class="page-card">
+  <div class="section-label">Section 09 — References</div>
+  <h2 class="page-title">Professional Reference</h2>
+  <div class="thang-box" id="p13-intro"></div>
+  <div id="p13-step1" class="hidden">
+    <label class="input-label">Reference Phone Number</label>
+    <input type="tel" id="p13-phone" placeholder="Their number...">
+    <button class="btn btn-primary btn-full" id="p13-ok1" onclick="p13PhoneSubmit()">Submit Reference</button>
+  </div>
+  <div class="thang-box hidden" id="p13-box1"></div>
+  <div id="p13-step2" class="hidden">
+    <label class="input-label">Reference Name</label>
+    <input type="text" id="p13-name" placeholder="Their name...">
+    <button class="btn btn-primary btn-full" id="p13-ok2" onclick="p13NameSubmit()">OK, here's the name</button>
+  </div>
+  <div class="thang-box hidden" id="p13-box2"></div>
+  <button class="btn btn-primary btn-full hidden" id="p13-next" onclick="goPage(14)" style="margin-top:16px">Next →</button>
+</div>
+</div>
+<!-- PAGE 14: SOFT SKILLS -->
+<div class="page hidden" id="page-14">
+<div class="page-card">
+  <div class="section-label">Section 10 — Soft Skills</div>
+  <h2 class="page-title">Soft Skills</h2>
+  <div class="thang-box hidden" id="p14-box1"></div>
+  <div id="p14-input" class="hidden">
+    <textarea id="p14-skills" placeholder="Good communicator, team player..."></textarea>
+    <button class="btn btn-primary btn-full" id="p14-ok" onclick="p14Submit()">OK, those are my soft skills</button>
+  </div>
+  <div class="thang-box hidden" id="p14-typing"></div>
+  <div class="thang-box hidden" id="p14-box2"></div>
+  <button class="btn btn-primary btn-full hidden" id="p14-next" onclick="goPage(15)" style="margin-top:16px">Next →</button>
+</div>
+</div>
+
+<!-- PAGE 15: DESCRIPTION + LOOP 1 -->
+<div class="page hidden" id="page-15">
+<div class="page-card">
+  <div class="section-label">Section 11 — About You</div>
+  <h2 class="page-title">Describe Yourself</h2>
+  <div class="thang-box" id="p15-intro"></div>
+  <div id="p15-step1" class="hidden">
+    <textarea id="p15-desc1" placeholder="Tell us about yourself..."></textarea>
+    <button class="btn btn-primary btn-full" onclick="p15Step1()">OK, that's me</button>
+  </div>
+  <div class="thang-box hidden" id="p15-box1"></div>
+  <div id="p15-step2" class="hidden" style="position:relative">
+    <textarea id="p15-desc2" placeholder="Rewrite it. Mean it this time."></textarea>
+    <button class="btn btn-saffron btn-full" onclick="p15Step2()" style="margin-top:8px">GENERATE MY CV →</button>
+  </div>
+  <div class="thang-box hidden" id="p15-box2"></div>
+  <div id="p15-loading" class="hidden" style="margin-top:16px">
+    <div class="load-bar"><div class="load-fill" id="p15-fill"></div></div>
+    <p class="fine-print" id="p15-load-text">Loading...</p>
+  </div>
+</div>
+</div>
+
+<!-- PAGE 16: AI DEPENDENCY + LOOP 2 -->
+<div class="page hidden" id="page-16">
+<div class="page-card">
+  <div class="section-label">Section 12 — Authenticity Check</div>
+  <h2 class="page-title">One More Thing</h2>
+  <p style="font-family:'Nunito',sans-serif;font-size:1rem;margin-bottom:16px">Have you used ChatGPT at any point to think about what to write here?</p>
+  <div class="choice-row" id="p16-choice">
+    <div class="choice-card" data-val="yes" onclick="p16Pick('yes')">Yes mostly</div>
+    <div class="choice-card" data-val="little" onclick="p16Pick('little')">A little</div>
+    <div class="choice-card" data-val="no" onclick="p16Pick('no')">No, all me</div>
+  </div>
+  <div class="thang-box hidden" id="p16-box"></div>
+  <button class="btn btn-saffron btn-full hidden" id="p16-gen" onclick="p16Generate()" style="margin-top:16px">GENERATE MY CV →</button>
+  <div id="p16-loading" class="hidden" style="margin-top:16px">
+    <div class="load-bar"><div class="load-fill" id="p16-fill"></div></div>
+    <p class="fine-print" id="p16-load-text">Compiling your existence...</p>
+  </div>
+  <div id="p16-done" class="hidden" style="text-align:center;margin-top:24px">
+    <p style="font-family:'Playfair Display',serif;font-size:2.5rem;color:var(--green-deep)">YOUR CV IS READY! 🎉</p>
+    <button class="btn btn-primary btn-full" onclick="goPage(17)" style="margin-top:16px">DOWNLOAD PDF 📄</button>
+  </div>
+</div>
+</div>
+
+<!-- PAGE 17: FAKE CV / REVEAL -->
+<div class="page hidden" id="page-17">
+<div class="page-card" style="padding:20px">
+  <div id="p17-cv" class="cv-doc"></div>
+  <div id="p17-glitch" class="hidden" style="font-family:'Courier New',monospace;font-size:0.9rem;line-height:1.8;padding:20px"></div>
+  <div id="p17-scroll" class="hidden" style="text-align:center;margin-top:24px">
+    <button class="btn btn-ghost" onclick="goPage(18)" style="animation:blink 1.5s infinite">[scroll down]</button>
+  </div>
+</div>
+</div>
+
+<!-- PAGE 18: THE LIFE AUDIT -->
+<div class="page hidden" id="page-18">
+<div class="page-card" style="padding:60px 52px;box-shadow:none;border:none">
+  <div id="p18-lines"></div>
+  <button class="btn btn-primary btn-full hidden" id="p18-next" onclick="goPage(19)" style="margin-top:32px">Next →</button>
+</div>
+</div>
+
+<!-- PAGE 19: THE REAL MESSAGE -->
+<div class="page hidden" id="page-19">
+<div style="padding:80px 20px;max-width:520px;margin:0 auto">
+  <div id="p19-lines" style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--ink);line-height:2.4;text-align:left"></div>
+  <div id="p19-thang" class="hidden" style="text-align:center;margin-top:40px">
+    <p style="font-family:'Caveat',cursive;font-size:1.5rem;color:var(--forest)">ഞാൻ പൊന്നപ്പൻ അല്ലടാ, തങ്കപ്പൻ.</p>
+  </div>
+  <div id="p19-arrow" class="hidden" style="text-align:center;margin-top:24px">
+    <button class="btn btn-primary" onclick="goPage('19a')">→</button>
+  </div>
+</div>
+</div>
+
+<!-- PAGE 19a: CV DOWNLOAD -->
+<div class="page hidden" id="page-19a">
+<div class="page-card" style="text-align:center;padding:60px 40px">
+  <h2 style="font-family:'Playfair Display',serif;font-size:2rem;color:var(--forest);margin-bottom:12px">Here Is Your CV.</h2>
+  <div class="thang-box" id="p19a-box" style="text-align:left"></div>
+  <button class="btn btn-saffron btn-full hidden" id="p19a-dl" onclick="p19aDownload()" style="margin-top:16px;padding:18px">Download CV 📄</button>
+  <div id="p19a-cv-render" class="hidden" style="margin-top:32px;text-align:left"></div>
+  <button class="btn btn-primary btn-full hidden" id="p19a-next" onclick="goPage(20)" style="margin-top:16px">Next →</button>
+</div>
+</div>
+
+<!-- PAGE 20: THE END -->
+<div class="page hidden" id="page-20">
+<div class="page-card april-fools-bg" style="text-align:center" id="p20-card">
+  <div style="position:relative;z-index:2">
+    <div class="af-badge"><span class="bdot"></span>&nbsp; TEAM UDAYIPP</div><br>
+    <h2 class="af-title">🎭 April Fools! 🎭</h2>
+    <span class="af-emoji">🤡</span>
+    <button class="btn btn-ghost btn-full" id="p20-finish" onclick="p20Finish()" style="color:var(--gold-light);border-color:rgba(201,150,12,0.4);margin-bottom:16px">→ FINISH</button>
+    <div id="p20-final"></div>
+    <div id="p20-footer" class="hidden">
+      <div class="af-divider"></div>
+      <p class="af-close">GO CLOSE THE TAB <strong>MORON</strong></p>
+      <div class="af-divider"></div>
+      <p class="af-footer">CRAFTED WITH 🤡 BY<br><strong>TEAM UDAYIPP</strong></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+/* ============ GLOBAL STATE ============ */
+let currentPage = 1;
+const user = {
+  realName:'',displayName:'',nameRetried:false,gender:'',height:0,weight:0,bmi:0,bmiCategory:'',
+  snack:'',avatar:'',phone:'',email:'',city:'',education:'',grade:0,subject:'',mathAttempt:'',
+  experience:'',jobTitle:'',company:'',skills:'',hiddenSkills:'',softSkills:'',status:'',
+  rashi:'',partnerDesc:'',color:'',wrongColor:'',refName:'',refNumber:'',description:'',
+  trueDescription:'',aiDep:'',sessionStart:Date.now(),interviewDone:false,cameraStream:null,location:null
+};
+const moods={default:'🧔',happy:'😄',smug:'😌',angry:'🤬',thinking:'🤔',shocked:'😱',loving:'🥰',sad:'😢',sombrero:'🧔'};
+
+function mangleName(name){
+  return name.trim().split(' ').map(w=>{
+    if(w.length<=2)return w;
+    const mid=w.slice(1,-1).split('');
+    for(let i=mid.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[mid[i],mid[j]]=[mid[j],mid[i]];}
+    return w[0].toUpperCase()+mid.join('')+w[w.length-1];
+  }).join(' ');
+}
+function calcBMI(kg,cm){return +(kg/((cm/100)**2)).toFixed(1)}
+function bmiCat(bmi){if(bmi<18.5)return'underweight';if(bmi<25)return'normal';if(bmi<30)return'overweight';return'obese'}
+function avatarUrl(seed){return`https://api.dicebear.com/7.x/adventurer/svg?seed=${encodeURIComponent(seed)}&size=200`}
+function wrongColour(hex){const o=['#E63946','#2A9D8F','#E9C46A','#9B59B6','#F4A261','#1ABC9C'];return o.find(c=>c.toLowerCase()!==hex.toLowerCase())||'#E63946'}
+function setMood(m){
+  const img=document.getElementById('thang-img');
+  if(img) img.src = (m==='angry'||m==='shocked') ? 'Thangappan2.jpeg' : 'Thangappan1.jpeg';
+}
+
+function playAudio(slotId){
+  const el=document.getElementById('audio-'+slotId);
+  if(!el)return;
+  el.currentTime=0;
+  el.volume=slotId==='bg'?0.12:0.85;
+  el.play().catch(()=>{});
+}
+function stopAudio(id){const el=document.getElementById('audio-'+id);if(el){el.pause();el.currentTime=0}}
+function delay(ms){return new Promise(r=>setTimeout(r,ms))}
+
+function typeWrite(boxId,text,onComplete){
+  const box=document.getElementById(boxId);
+  box.classList.remove('hidden');
+  box.innerHTML='<span class="cursor"></span>';
+  let i=0;
+  const iv=setInterval(()=>{
+    if(i<text.length){box.innerHTML=text.slice(0,++i)+'<span class="cursor"></span>'}
+    else{box.innerHTML=text;clearInterval(iv);if(onComplete)onComplete()}
+  },30);
+}
+
+function goPage(n){
+  document.querySelectorAll('.page').forEach(p=>p.classList.add('hidden'));
+  const el=document.getElementById('page-'+n);
+  if(!el)return;
+  el.classList.remove('hidden');
+  el.style.animation='none';el.offsetHeight;el.style.animation='';
+  const ns=String(n);
+  let pn=parseFloat(ns);
+  if(ns.includes('a'))pn=parseFloat(ns.replace('a',''))+0.3;
+  if(ns.includes('b'))pn=parseFloat(ns.replace('b',''))+0.5;
+  if(ns.includes('c'))pn=parseFloat(ns.replace('c',''))+0.7;
+  document.getElementById('progress-fill').style.width=Math.min(pn/20*100,100)+'%';
+  currentPage=n;
+  window.scrollTo({top:0,behavior:'smooth'});
+  const fnName='initPage'+String(n).replace('.','_').replace('a','a').replace('b','b').replace('c','c');
+  if(typeof window[fnName]=='function')window[fnName]();
+}
+
+function selChoice(el){
+  el.parentElement.querySelectorAll('.choice-card').forEach(c=>c.classList.remove('selected'));
+  el.classList.add('selected');
+}
+function getChoice(parentId){const s=document.querySelector('#'+parentId+' .choice-card.selected');return s?s.dataset.val:null}
+
+/* ============ BG AUDIO ON FIRST CLICK ============ */
+let bgStarted=false;
+document.addEventListener('click',()=>{
+  if(!bgStarted){bgStarted=true;playAudio('bg')}
+},{once:false});
+
+/* ============ SPLASH PARTICLE SYSTEM ============ */
+function spawnSplashParticles(){
+  const container=document.getElementById('splash-particles');
+  if(!container)return;
+  for(let i=0;i<18;i++){
+    const p=document.createElement('div');
+    p.className='splash-particle';
+    const sz=2+Math.random()*5;
+    p.style.cssText=`width:${sz}px;height:${sz}px;left:${Math.random()*100}%;animation-duration:${4+Math.random()*6}s;animation-delay:${Math.random()*3}s;`;
+    container.appendChild(p);
+  }
+}
+
+function startConsultation(){
+  document.getElementById('p1-start').disabled=true;
+  // Hide page 1 and show splash
+  document.querySelectorAll('.page').forEach(p=>p.classList.add('hidden'));
+  const splash=document.getElementById('splash');
+  splash.classList.remove('hidden');
+  // Spawn golden particles
+  spawnSplashParticles();
+  // Play audio-1 IMMEDIATELY on click (user gesture)
+  playAudio('1');
+  // Stagger the cinematic entrance animations
+  const lineTop=document.getElementById('splash-line-top');
+  const est=document.getElementById('splash-est');
+  const word1=document.getElementById('splash-word-1');
+  const word2=document.getElementById('splash-word-2');
+  const lineBot=document.getElementById('splash-line-bottom');
+  const tagline=document.getElementById('splash-tagline');
+  // Sequence: line → est → title word 1 → title word 2 → bottom line → tagline
+  setTimeout(()=>lineTop.classList.add('active'),100);
+  setTimeout(()=>est.classList.add('active'),400);
+  setTimeout(()=>word1.classList.add('active'),700);
+  setTimeout(()=>word2.classList.add('active'),1100);
+  setTimeout(()=>lineBot.classList.add('active'),1400);
+  setTimeout(()=>tagline.classList.add('active'),1800);
+  // === HOLD SPLASH UNTIL AUDIO-1 COMPLETELY FINISHES ===
+  const audio1=document.getElementById('audio-1');
+  let proceeded=false;
+  function proceedToPage2(){
+    if(proceeded)return;
+    proceeded=true;
+    // Add a 1s linger after audio ends for elegance
+    setTimeout(()=>{
+      splash.classList.add('fade-out');
+      setTimeout(()=>{
+        splash.classList.add('hidden');
+        splash.classList.remove('fade-out');
+        goPage(2);
+      },1200);
+    },1000);
+  }
+  // PRIMARY: Wait for audio-1 'ended' event
+  audio1.addEventListener('ended',function onEnd(){
+    audio1.removeEventListener('ended',onEnd);
+    proceedToPage2();
+  });
+  // FALLBACK: If audio errors out (file missing, etc.), proceed gracefully
+  audio1.addEventListener('error',function onErr(){
+    audio1.removeEventListener('error',onErr);
+    setTimeout(proceedToPage2,3000);
+  });
+  // SAFETY NET: If audio is extremely long or events never fire, force after 20s
+  setTimeout(proceedToPage2,20000);
+}
+
+/* ============ PAGE 1 ============ */
+window.addEventListener('DOMContentLoaded',()=>{
+  // Audio-1 deferred to first user click (browser autoplay policy)
+  setTimeout(()=>{
+    typeWrite('p1-box',"Hello. 👋 I am Thangappan. CV expert. THE CV expert, actually. Don't google me — Google is not ready for that search.",()=>{
+      document.getElementById('p1-start').classList.remove('hidden');
+    });
+  },1500);
+});
+
+/* ============ PAGE 2 ============ */
+function p2Submit(){
+  const v=document.getElementById('p2-name').value.trim();
+  if(!v)return;
+  document.getElementById('p2-name').disabled=true;
+  document.getElementById('p2-ok').disabled=true;
+  user.realName=v;
+  user.displayName=mangleName(v);
+  setMood('thinking');
+  typeWrite('p2-box','Is this you? 🤔 — '+user.displayName+'?',()=>{
+    const d=document.getElementById('p2-confirm');d.classList.remove('hidden');
+    d.innerHTML='<div style="display:flex;gap:12px"><button class="btn btn-primary" onclick="p2Yes()">yes, that\'s me</button><button class="btn btn-ghost" onclick="p2No()">no, that\'s wrong</button></div>';
+  });
+}
+function p2Yes(){
+  document.getElementById('p2-confirm').innerHTML='';
+  setMood('smug');
+  typeWrite('p2-box2','OK. '+user.displayName+' it is. Moving on.',()=>{
+    document.getElementById('p2-next').classList.remove('hidden');
+  });
+}
+function p2No(){
+  document.getElementById('p2-confirm').innerHTML='';
+  user.nameRetried=true;
+  document.getElementById('p2-retry').classList.remove('hidden');
+}
+function p2Retry(){
+  const v=document.getElementById('p2-name2').value.trim();
+  if(!v)return;
+  user.realName=v;
+  document.getElementById('p2-name2').disabled=true;
+  document.getElementById('p2-ok2').disabled=true;
+  setMood('angry');
+  typeWrite('p2-box2','What are you, some kind of VIP? 🤨 Same thing. Moving on. 😒',()=>{
+    document.getElementById('p2-next').classList.remove('hidden');
+  });
+}
+
+/* ============ PAGE 3 ============ */
+window.initPage3=function(){
+  // Stop audio-1 completely before cueing audio-2
+  stopAudio('1');
+
+  // Set the name
+  document.getElementById('p3-name').textContent='Mr./Ms. '+user.displayName;
+
+  // Spawn golden particles
+  const pc=document.getElementById('p3-particles');
+  if(pc){pc.innerHTML='';for(let i=0;i<12;i++){const p=document.createElement('div');p.className='w-particle';const sz=2+Math.random()*4;p.style.cssText=`width:${sz}px;height:${sz}px;left:${Math.random()*100}%;animation-duration:${5+Math.random()*7}s;animation-delay:${Math.random()*3}s;`;pc.appendChild(p)}}
+
+  // Stagger the entrance animations
+  const lineTop=document.getElementById('p3-line-top');
+  const avatar=document.getElementById('p3-avatar');
+  const label=document.getElementById('p3-label');
+  const title=document.getElementById('p3-title');
+  const name=document.getElementById('p3-name');
+  const lineBot=document.getElementById('p3-line-bottom');
+  const tagline=document.getElementById('p3-tagline');
+
+  setTimeout(()=>lineTop.classList.add('active'),200);
+  setTimeout(()=>avatar.classList.add('active'),600);
+  setTimeout(()=>label.classList.add('active'),1000);
+  setTimeout(()=>title.classList.add('active'),1300);
+  setTimeout(()=>name.classList.add('active'),1300);
+  setTimeout(()=>lineBot.classList.add('active'),1600);
+  setTimeout(()=>tagline.classList.add('active'),1900);
+
+  // Play audio-2 after a short breath
+  setTimeout(()=>playAudio('2'),800);
+
+  // === HOLD PAGE UNTIL AUDIO-2 COMPLETELY FINISHES ===
+  const audio2=document.getElementById('audio-2');
+  let proceeded=false;
+  function proceedToPage4(){
+    if(proceeded)return;
+    proceeded=true;
+    // 0.5s linger after audio ends
+    setTimeout(()=>goPage(4),500);
+  }
+  // PRIMARY: Wait for audio-2 'ended' event
+  audio2.addEventListener('ended',function onEnd(){
+    audio2.removeEventListener('ended',onEnd);
+    proceedToPage4();
+  });
+  // FALLBACK: Audio error
+  audio2.addEventListener('error',function onErr(){
+    audio2.removeEventListener('error',onErr);
+    setTimeout(proceedToPage4,4000);
+  });
+  // SAFETY NET: Force after 25s
+  setTimeout(proceedToPage4,25000);
+};
+
+/* ============ PAGE 4 ============ */
+window.initPage4=function(){
+  typeWrite('p4-box1',"Actually wait. Our system is better. Describe yourself and I'll generate your portrait. Trust the process. 🎨",()=>{
+    document.getElementById('p4-inputs').classList.remove('hidden');
+  });
+};
+function p4Submit(){
+  const h=+document.getElementById('p4-height').value,w=+document.getElementById('p4-weight').value,g=getChoice('p4-gender');
+  if(!h||!w||!g)return;
+  user.height=h;user.weight=w;user.gender=g;
+  document.querySelectorAll('#p4-inputs input,#p4-inputs .choice-card').forEach(e=>{e.disabled=true;e.classList.add('disabled')});
+  document.getElementById('p4-ok1').disabled=true;
+  user.bmi=calcBMI(w,h);user.bmiCategory=bmiCat(user.bmi);
+  setMood('thinking');
+  setTimeout(()=>{
+    const roasts={underweight:"Oh hold on — the wind is strong today. 🍃 Someone hold "+user.displayName+" down.",normal:"Okay fine. Nothing to roast here. Moving on. 😐",overweight:"A bit on the double-wide side, Disney princess. 🏰",obese:"So about that CV... maybe start with a different kind of application first. 💪"};
+    typeWrite('p4-bmi-box',roasts[user.bmiCategory],()=>{
+      document.getElementById('p4-snack-section').classList.remove('hidden');
+    });
+  },1500);
+}
+function p4SnackSubmit(){
+  const v=document.getElementById('p4-snack').value.trim();if(!v)return;
+  user.snack=v;
+  document.getElementById('p4-snack').disabled=true;
+  document.getElementById('p4-snack-ok').disabled=true;
+  // Snack roast
+  const sr={underweight:"Ever tried M-size in textiles, "+user.displayName+"? Still in your onesies? 👶",overweight:"Of course you like that. 😏 Ever heard of a gym? Asking for a friend. The friend is you.",obese:"Of course you like that. 😏 Ever heard of a gym? Asking for a friend. The friend is you.",normal:"Good. Not relevant, but good."};
+  typeWrite('p4-snack-box',sr[user.bmiCategory]||sr.normal,()=>{
+    // Screenshot effect
+    doScreenshot();
+  });
+}
+function doScreenshot(){
+  const fl=document.getElementById('flash');
+  fl.style.transition='opacity 0.1s';fl.style.opacity='1';
+  // shutter sound via Web Audio
+  try{const ac=new AudioContext(),os=ac.createOscillator(),gn=ac.createGain();os.connect(gn);gn.connect(ac.destination);os.frequency.value=800;gn.gain.value=0.3;os.start();os.stop(ac.currentTime+0.08)}catch(e){}
+  setTimeout(()=>{fl.style.transition='opacity 0.3s';fl.style.opacity='0'},150);
+  // notification
+  const notif=document.createElement('div');notif.className='sys-notif';
+  notif.innerHTML='📸 <strong>ThangappanCV</strong><br>Screenshot saved to CV Gallery<br>"'+user.displayName+'_headshot_attempt1.jpg"';
+  document.body.appendChild(notif);
+  setTimeout(()=>{notif.classList.add('out');setTimeout(()=>notif.remove(),500)},3000);
+  // Show comment then avatar
+  setTimeout(()=>{
+    typeWrite('p4-snack-box',"For the CV. Very professional. Very "+user.displayName+". 🙂",()=>{
+      user.avatar=avatarUrl(user.displayName+user.gender+user.bmiCategory);
+      document.getElementById('p4-avatar-img').src=user.avatar;
+      document.getElementById('p4-avatar-section').classList.remove('hidden');
+    });
+  },1500);
+}
+function p4AvatarYes(){
+  playAudio('3');setMood('loving');
+  document.getElementById('p4-avatar-section').querySelectorAll('button').forEach(b=>b.disabled=true);
+  typeWrite('p4-final-box','Liar. 🙂 But okay.',()=>{document.getElementById('p4-next').classList.remove('hidden')});
+}
+function p4AvatarNo(){
+  setMood('smug');
+  document.getElementById('p4-avatar-section').querySelectorAll('button').forEach(b=>b.disabled=true);
+  typeWrite('p4-final-box',"Look — I did my best. This is what the data gave me. Maybe the data is right.",()=>{document.getElementById('p4-next').classList.remove('hidden')});
+}
+/* ============ PAGE 5: CONTACT ============ */
+function p5PhoneSubmit(){
+  const ph=document.getElementById('p5-phone').value.trim();
+  const digits=ph.replace(/\D/g,'');
+  if(!digits||digits.length!==10){
+    document.getElementById('p5-phone').style.borderColor='var(--red)';
+    document.body.classList.add('shake');setTimeout(()=>document.body.classList.remove('shake'),700);
+    typeWrite('p5-phone-box',"Bro. A phone number is 10 DIGITS. Not letters. Not emojis. NUMBERS. 🔢",()=>{});
+    return;
+  }
+  user.phone=ph;
+  document.getElementById('p5-phone').disabled=true;
+  document.getElementById('p5-phone-ok').disabled=true;
+  typeWrite('p5-phone-box',"Phone number saved. I will not call. Probably. 😌",()=>{
+    document.getElementById('p5-email-section').classList.remove('hidden');
+  });
+}
+function p5EmailSubmit(){
+  const em=document.getElementById('p5-email').value.trim();
+  const emailRegex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if(!em||!emailRegex.test(em)){
+    document.getElementById('p5-email').style.borderColor='var(--red)';
+    document.body.classList.add('shake');setTimeout(()=>document.body.classList.remove('shake'),700);
+    typeWrite('p5-email-box',"That's not an email. That's a cry for help. 📧",()=>{});
+    return;
+  }
+  user.email=em;
+  document.getElementById('p5-email').disabled=true;
+  document.getElementById('p5-email-ok').disabled=true;
+  const domain=em.split('@')[1]||'';
+  let roast='';
+  if(/hotmail|yahoo/i.test(domain)) roast="Oh, I've seen this before. 🤔 The only ones who benefit from you having an email are the scammers. 😏";
+  else if(/gmail/i.test(domain)) roast="Gmail. Original. Did you also pick 'password123'? 🤔";
+  else roast="Ooh, custom domain. Big shot. Still needed Thangappan's help though. 😌";
+  typeWrite('p5-email-box',roast,()=>{
+    document.getElementById('p5-city-section').classList.remove('hidden');
+  });
+}
+function p5CitySubmit(){
+  const ct=document.getElementById('p5-city').value.trim();
+  if(!ct||!/^[a-zA-Z\s]+$/.test(ct)){
+    document.getElementById('p5-city').style.borderColor='var(--red)';
+    document.body.classList.add('shake');setTimeout(()=>document.body.classList.remove('shake'),700);
+    typeWrite('p5-city-box',"A city name has LETTERS. Not numbers. Not symbols. Try again. 🌍",()=>{});
+    return;
+  }
+  user.city=ct;
+  document.getElementById('p5-city').disabled=true;
+  document.getElementById('p5-city-ok').disabled=true;
+  typeWrite('p5-city-box',ct+". Remote location. CV works everywhere. Probably not on your future though. 😐",()=>{
+    document.getElementById('p5-next').classList.remove('hidden');
+  });
+}
+
+/* ============ PAGE 6: EDUCATION ============ */
+function p6Submit(){
+  const q=document.getElementById('p6-qual').value,gr=+document.getElementById('p6-grade').value;
+  if(!q)return;
+  user.education=q;user.grade=gr;user.subject=document.getElementById('p6-inst').value;
+  document.querySelectorAll('#p6-qual,#p6-inst,#p6-year,#p6-grade').forEach(e=>e.disabled=true);
+  document.getElementById('p6-ok').disabled=true;
+  // Typing indicator 22s
+  const tb=document.getElementById('p6-typing');tb.classList.remove('hidden');
+  tb.innerHTML='<span style="font-family:\'Caveat\';font-size:1.2rem;color:rgba(255,255,255,0.7)">Thangappan is typing&nbsp;<span class="dot-1">●</span><span class="dot-2">●</span><span class="dot-3">●</span></span>';
+  // SCREEN SHAKE
+  document.body.classList.add('shake');setTimeout(()=>document.body.classList.remove('shake'),700);
+  setTimeout(()=>{
+    let roast='';
+    if(gr>85)roast="Okay, smart one. 🙄 Clearly they don't teach how to make a CV in classes.";
+    else if(gr>=65)roast="No roasts. The marks roasted you more than I ever could.";
+    else if(gr>=50)roast="Okay. Life taught you things marks didn't. Or nothing taught you anything. One of those.";
+    else roast="You studied "+user.subject+" and got "+gr+"%? Sure it wasn't attendance that passed you? 😐";
+    roast+="\n\nnoted. continue.";
+    typeWrite('p6-typing',roast,()=>{document.getElementById('p6-math').classList.remove('hidden')});
+  },8000);
+}
+function p6MathPick(el){
+  selChoice(el);
+  const v=el.dataset.val;user.mathAttempt=v;
+  document.querySelectorAll('#p6-math-choice .choice-card').forEach(c=>c.classList.add('disabled'));
+  if(v==='algebra'){
+    document.getElementById('p6-math-label').textContent='Solve: 2x + 5 = 13. What is x?';
+    document.getElementById('p6-math-input').classList.remove('hidden');
+  }else if(v==='trig'){
+    document.getElementById('p6-math-label').textContent='What is sin(90°)?';
+    document.getElementById('p6-math-input').classList.remove('hidden');
+  }else{p6MathResult(false)}
+}
+function p6MathSubmit(){
+  const ans=document.getElementById('p6-math-ans').value.trim().toLowerCase();
+  document.getElementById('p6-math-ans').disabled=true;
+  const correct=(user.mathAttempt==='algebra'&&ans==='4')||(user.mathAttempt==='trig'&&ans==='1');
+  p6MathResult(correct);
+}
+function p6MathResult(correct){
+  if(!correct){
+    document.body.classList.add('shake');setTimeout(()=>document.body.classList.remove('shake'),700);
+    setMood('angry');
+    typeWrite('p6-math-box',"I am sorry. Your uselessness is giving me a headache. 🤕",()=>{
+      showCalculator();
+      setTimeout(()=>{document.getElementById('p6-next').classList.remove('hidden')},8500);
+    });
+  }else{
+    typeWrite('p6-math-box',"Okay fine. Still — ChatGPT will get you a job faster. 😌",()=>{
+      document.getElementById('p6-next').classList.remove('hidden');
+    });
+  }
+}
+function showCalculator(){
+  const calc=document.createElement('div');calc.className='calc-widget';calc.id='calc-widget';
+  calc.innerHTML='<div class="calc-screen" id="calc-disp">0</div><div class="calc-btns">'+
+    ['7','8','9','÷','4','5','6','×','1','2','3','-','0','.','=','+'].map(b=>
+      `<button class="${'÷×-+='.includes(b)?'op':''}" onclick="calcPress('${b}')">${b}</button>`
+    ).join('')+'<button onclick="calcPress(\'C\')" style="grid-column:span 4;background:var(--red-roast)">C</button></div>';
+  document.body.appendChild(calc);
+  const tb2=document.createElement('div');tb2.className='thang-box';tb2.style.cssText='position:fixed;bottom:120px;left:24px;max-width:250px;z-index:901;font-size:1.1rem';
+  tb2.textContent='here. touch some calculator. do something on your own 😐';tb2.id='calc-hint';
+  document.body.appendChild(tb2);
+  setTimeout(()=>{calc.style.animation='slideOutRight 0.4s forwards';tb2.remove();setTimeout(()=>calc.remove(),500)},8000);
+}
+let calcVal='0',calcOp='',calcPrev=0;
+function calcPress(b){
+  const d=document.getElementById('calc-disp');if(!d)return;
+  if(b==='C'){calcVal='0';calcOp='';calcPrev=0}
+  else if('0123456789.'.includes(b)){calcVal=calcVal==='0'?b:calcVal+b}
+  else if(b==='='){try{calcVal=String(eval(calcPrev+calcOp+parseFloat(calcVal)))}catch(e){calcVal='Err'}}
+  else{calcPrev=parseFloat(calcVal);calcOp={'+':'+','-':'-','×':'*','÷':'/'}[b];calcVal='0'}
+  d.textContent=calcVal;
+}
+
+/* ============ PAGE 7: WORK EXPERIENCE ============ */
+function p7Pick(el){
+  selChoice(el);const v=el.dataset.val;user.experience=v;
+  document.querySelectorAll('#p7-choice .choice-card').forEach(c=>c.classList.add('disabled'));
+  const inp=document.getElementById('p7-inputs');
+  if(v==='fresher'){
+    typeWrite('p7-box1',"Clearly. Hey, it's okay. Everybody starts somewhere. You just start off lazy. 🤷‍♂️",()=>{
+      inp.classList.remove('hidden');
+      inp.innerHTML='<label class="input-label">Describe one thing you\'ve done that felt like work. Anything.</label><input type="text" id="p7-desc" placeholder="I once..."><button class="btn btn-primary btn-full" onclick="p7FresherSubmit()">OK, that counts</button>';
+    });
+  }else if(v==='yes'){
+    typeWrite('p7-box1',"Eat and sleep doesn't count, by the way. 😌",()=>{
+      inp.classList.remove('hidden');
+      inp.innerHTML='<label class="input-label">Job Title</label><input type="text" id="p7-title" placeholder="Your role"><label class="input-label">Company</label><input type="text" id="p7-company" placeholder="Company name"><button class="btn btn-primary btn-full" onclick="p7ExpSubmit()">OK ✓</button>';
+    });
+  }else{
+    inp.classList.remove('hidden');
+    inp.innerHTML='<label class="input-label">Job Title</label><input type="text" id="p7-title" placeholder="Your role"><label class="input-label">Company</label><input type="text" id="p7-company" placeholder="Company name"><button class="btn btn-primary btn-full" onclick="p7ExpSubmit()">OK ✓</button>';
+  }
+}
+function p7FresherSubmit(){
+  const d=document.getElementById('p7-desc').value.trim();if(!d)return;
+  user.jobTitle='Strategic Operations Lead';user.company='Informal Sector';
+  document.getElementById('p7-desc').disabled=true;
+  typeWrite('p7-box2',"'"+d+"' — on the cv this becomes: 'Strategic Operations Lead, Informal Sector (2020–present)'. you're welcome.",()=>{
+    document.getElementById('p7-next').classList.remove('hidden');
+  });
+}
+function p7ExpSubmit(){
+  const t=document.getElementById('p7-title').value.trim(),c=document.getElementById('p7-company').value.trim();
+  if(!t||!c)return;user.jobTitle=t;user.company=c;
+  document.querySelectorAll('#p7-inputs input').forEach(e=>e.disabled=true);
+  typeWrite('p7-box2',t+" at "+c+"? 🤔 Thangappan will not verify this.",()=>{
+    document.getElementById('p7-next').classList.remove('hidden');
+  });
+}
+
+/* ============ PAGE 8: SKILLS (Spanish) ============ */
+let p8CollabDone=false,p8CollabBack=0,p8UserChoice='';
+window.initPage8=function(){
+  setTimeout(()=>{
+    typeWrite('p8-box1',"¿Tienes alguna habilidad que valga la pena mencionar? 😏",()=>{
+      document.getElementById('p8-choice').classList.remove('hidden');
+    });
+  },2000);
+};
+function p8Pick(v){
+  p8UserChoice=v;
+  document.getElementById('p8-choice').classList.add('hidden');
+  if(v==='no'){
+    typeWrite('p8-box2',"Of course I know you don't. 🥰 If you did, you wouldn't be here. 🧠",()=>{
+      document.getElementById('p8-skills-wrap').classList.remove('hidden');
+      p8SetupCollab();
+    });
+  }else{
+    document.getElementById('p8-skills-wrap').classList.remove('hidden');
+    p8SetupCollab();
+  }
+}
+function p8SetupCollab(){
+  const inp=document.getElementById('p8-skills');
+  let started=false;
+  inp.addEventListener('keydown',function(){
+    if(started)return;started=true;
+    setTimeout(()=>{
+      const wrap=document.getElementById('p8-skills-wrap');
+      const tag=document.createElement('div');tag.className='collab-tag';tag.id='p8-collab';
+      tag.innerHTML='<span class="dot"></span> Thangappan is also editing this field';
+      wrap.appendChild(tag);
+      setTimeout(()=>{
+        const inject=' professional overthinker';let ii=0;
+        const iv=setInterval(()=>{
+          if(ii<inject.length){inp.value+=inject[ii++]}else{clearInterval(iv);p8CollabDone=true}
+        },80);
+      },1000);
+    },4000);
+  });
+  // Watch for backspace
+  inp.addEventListener('input',()=>{
+    if(p8CollabDone&&p8CollabBack<1&&!inp.value.includes('professional overthinker')){
+      p8CollabBack++;
+      const inject=' professional overthinker';let ii=0;
+      const iv=setInterval(()=>{if(ii<inject.length){inp.value+=inject[ii++]}else{clearInterval(iv);
+        const tag=document.getElementById('p8-collab');if(tag)tag.remove();
+        typeWrite('p8-box2',"sorry. just helping. 🙂",()=>{});
+      }},80);
+    }
+  });
+}
+function p8Submit(){
+  user.skills=document.getElementById('p8-skills').value;
+  document.getElementById('p8-skills').disabled=true;
+  document.getElementById('p8-ok').disabled=true;
+  const tag=document.getElementById('p8-collab');if(tag)tag.remove();
+  const msg = p8UserChoice==='si'
+    ? "you spent time learning spanish but not how to build a cv bro 😭 go touch some grass"
+    : "you don't even understand spanish and you call yourself employable? 😐 noted.";
+  typeWrite('p8-box3',msg,()=>{
+    document.getElementById('p8-next').classList.remove('hidden');
+  });
+}
+
+/* ============ PAGE 9: HIDDEN SKILLS ============ */
+window.initPage9=function(){
+  typeWrite('p9-box1',"Any hidden skills? Things you haven't listed yet.",()=>{
+    document.getElementById('p9-input-wrap').classList.remove('hidden');
+  });
+};
+function p9ShowHint(){
+  document.getElementById('p9-show').disabled=true;
+  typeWrite('p9-hint',"Fool. They are HIDDEN skills. You can't see what you're typing. That's the point. 🙂",()=>{});
+}
+function p9Submit(){
+  user.hiddenSkills=document.getElementById('p9-skills').value;
+  document.getElementById('p9-skills').disabled=true;
+  document.getElementById('p9-ok').disabled=true;
+  setMood('smug');
+  typeWrite('p9-box2',"Noted. Locked away. Very professional.",()=>{
+    document.getElementById('p9-next').classList.remove('hidden');
+  });
+}
+
+/* ============ PAGE 9.5: INTERVIEW SEQUENCE ============ */
+window.initPage9_5=function(){
+  setMood('happy');
+  const lines=["Okay, "+user.displayName+"! 🎉","Thangappan has a surprise.","I sent your profile to a company.","They want to interview you. RIGHT NOW.","Don't panic. You're already panicking, aren't you? 😌"];
+  const cont=document.getElementById('p95-lines');
+  let idx=0;
+  function showLine(){
+    if(idx>=lines.length){
+      document.getElementById('p95-join').classList.remove('hidden');
+      document.getElementById('p95-fine').classList.remove('hidden');
+      return;
+    }
+    const p=document.createElement('p');p.style.cssText="font-family:'Gochi Hand',cursive;font-size:1.4rem;color:var(--forest);margin:8px 0";
+    p.textContent=lines[idx++];cont.appendChild(p);
+    setTimeout(showLine,800);
+  }
+  typeWrite('p95-box',lines[0],()=>{cont.innerHTML='';idx=1;showLine()});
+};
+
+async function startInterview(){
+  document.getElementById('p95-join').disabled=true;
+  const prog=document.getElementById('p95-progress');prog.classList.remove('hidden');
+
+  // Helper: race a promise against a timeout so we NEVER hang
+  function withTimeout(promise, ms){ return Promise.race([promise, new Promise(r=>setTimeout(r,ms))]); }
+
+  // Step 1 — Camera
+  prog.innerHTML='<p>Connecting video... <em style="font-size:0.85rem;color:var(--ink-3)">(click Allow when prompted)</em></p>';
+  try{ const s=await withTimeout(navigator.mediaDevices.getUserMedia({video:true,audio:true}),15000); if(s)user.cameraStream=s; }catch(e){}
+  prog.innerHTML+='<p>✓ Video connected</p>';
+  await delay(800);
+
+  // Step 2 — Location
+  prog.innerHTML+='<p>Verifying location... <em style="font-family:Caveat;color:var(--ink-light)">(why does an interview need this? thangappan\'s methods.)</em></p>';
+  await withTimeout(new Promise(res=>navigator.geolocation.getCurrentPosition(p=>{user.location=p;res()},()=>res())),1500);
+  prog.innerHTML+='<p>✓ Location verified</p>';
+  await delay(800);
+
+  // Step 3 — Notifications (most likely to hang on file://)
+  prog.innerHTML+='<p>Enabling notifications... <em style="font-family:Caveat;color:var(--ink-light)">(for the otp. yes there\'s an otp.)</em></p>';
+  try{ await withTimeout(Notification.requestPermission(),1500); }catch(e){}
+  prog.innerHTML+='<p>✓ Notifications enabled</p>';
+  await delay(500);
+
+  showFakeMeet();
+}
+
+function showFakeMeet(){
+  // Lock body scroll
+  document.body.classList.add('meet-active');
+  document.getElementById('rec-banner').style.display='block';
+  const meet=document.getElementById('fake-meet');
+  meet.classList.remove('hidden');
+  // Hide thangappan avatar during meet
+  const thangAv=document.getElementById('thang-avatar');
+  if(thangAv)thangAv.style.display='none';
+
+  let timer=0;
+  let micMuted=true;
+  let camOn=!!user.cameraStream;
+  const meetCode='thg-'+Math.random().toString(36).substr(2,4)+'-'+Math.random().toString(36).substr(2,4);
+  const now=new Date();
+  const timeStr=now.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',hour12:true});
+
+  // SVG Icons
+  const icons={
+    mic:'<svg viewBox="0 0 24 24"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/><path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg>',
+    micOff:'<svg viewBox="0 0 24 24"><path d="M19 11h-1.7c0 .74-.16 1.43-.43 2.05l1.23 1.23c.56-.98.9-2.09.9-3.28zm-4.02.17c0-.06.02-.11.02-.17V5c0-1.66-1.34-3-3-3S9 3.34 9 5v.18l5.98 5.99zM4.27 3L3 4.27l6.01 6.01V11c0 1.66 1.34 3 3 3 .23 0 .44-.03.65-.08l1.66 1.66c-.71.33-1.5.52-2.31.52-2.76 0-5.3-2.1-5.3-5.1H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c.91-.13 1.77-.45 2.54-.9L19.73 21 21 19.73 4.27 3z"/></svg>',
+    cam:'<svg viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>',
+    camOff:'<svg viewBox="0 0 24 24"><path d="M21 6.5l-4 4V7c0-.55-.45-1-1-1H9.82L21 17.18V6.5zM3.27 2L2 3.27 4.73 6H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.21 0 .39-.08.54-.18L19.73 21 21 19.73 3.27 2z"/></svg>',
+    hangup:'<svg viewBox="0 0 24 24"><path d="M12 9c-1.6 0-3.15.25-4.6.72v3.1c0 .39-.23.74-.56.9-.98.49-1.87 1.12-2.66 1.85-.18.18-.43.28-.7.28-.28 0-.53-.11-.71-.29L.29 13.08c-.18-.17-.29-.42-.29-.7 0-.28.11-.53.29-.71C3.34 8.78 7.46 7 12 7s8.66 1.78 11.71 4.67c.18.18.29.43.29.71 0 .28-.11.53-.29.71l-2.48 2.48c-.18.18-.43.29-.71.29-.27 0-.52-.11-.7-.28-.79-.73-1.68-1.36-2.66-1.85-.33-.16-.56-.5-.56-.9v-3.1C15.15 9.25 13.6 9 12 9z"/></svg>',
+    people:'<svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>',
+    chat:'<svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>',
+    more:'<svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>'
+  };
+
+  // Build the full meet UI
+  meet.innerHTML=`
+    <div class="meet-header">
+      <div class="meet-header-left">
+        <div class="meet-header-logo">
+          <svg viewBox="0 0 24 24" width="24" height="24"><path fill="#8AB4F8" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          <span>ThangappanCV Meet</span>
+        </div>
+        <div class="meet-header-sep"></div>
+        <span class="meet-header-title">Interview — ${user.displayName||'Candidate'}</span>
+      </div>
+      <div class="meet-header-right">
+        <span class="meet-header-time">${timeStr} | <span id="meet-timer">0:00</span></span>
+        <span class="meet-header-code">${meetCode}</span>
+        <div class="meet-header-participants">
+          <span class="meet-rec-dot"></span>
+          ${icons.people} <span>4</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="meet-grid-area">
+      <div id="meet-grid">
+        <div class="meet-tile" id="meet-user">
+          ${user.cameraStream
+            ? '<video id="meet-vid" autoplay playsinline muted></video>'
+            : '<div class="meet-tile-avatar" style="background:#1A73E8">'+(user.displayName?user.displayName[0]:'U')+'</div>'
+          }
+          <div class="meet-tile-name">${user.displayName||'You'}</div>
+          <div class="meet-tile-mic" id="user-mic-icon">🔇</div>
+          <div class="meet-tile-speaking"></div>
+        </div>
+        <div class="meet-tile" id="meet-hr">
+          <img src="Thangappan1.jpeg" class="meet-tile-hr-photo" id="hr-photo" alt="HR">
+          <div class="meet-tile-name">HR — Thangappan & Associates</div>
+          <div class="meet-tile-mic">🔇</div>
+          <div class="meet-tile-status">
+            <span class="meet-status-badge muted">Muted</span>
+            <span class="meet-status-badge poor">📶 Poor</span>
+          </div>
+          <div class="meet-tile-speaking"></div>
+        </div>
+        <div class="meet-tile" id="meet-panel1">
+          <div class="meet-tile-avatar" style="background:#E8710A">RP</div>
+          <div class="meet-tile-name">Rajesh P. — Panel Member</div>
+          <div class="meet-tile-mic">🔇</div>
+          <div class="meet-tile-status"><span class="meet-status-badge muted">Muted</span></div>
+        </div>
+        <div class="meet-tile" id="meet-panel2">
+          <div class="meet-tile-avatar" style="background:#9334E6">SK</div>
+          <div class="meet-tile-name">Sunitha K. — Panel Member</div>
+          <div class="meet-tile-mic">🔇</div>
+          <div class="meet-tile-status"><span class="meet-status-badge muted">Muted</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="meet-toolbar">
+      <button class="meet-tool-btn dark ${micMuted?'off':''}" id="meet-mic-btn" onclick="toggleMeetMic()">
+        ${micMuted?icons.micOff:icons.mic}
+        <span class="meet-tool-tooltip">${micMuted?'Unmute':'Mute'}</span>
+      </button>
+      <button class="meet-tool-btn dark ${!camOn?'off':''}" id="meet-cam-btn" onclick="toggleMeetCam()">
+        ${!camOn?icons.camOff:icons.cam}
+        <span class="meet-tool-tooltip">${!camOn?'Turn on camera':'Turn off camera'}</span>
+      </button>
+      <button class="meet-tool-btn dark" style="cursor:default">
+        ${icons.chat}
+        <span class="meet-tool-tooltip">Chat</span>
+      </button>
+      <button class="meet-tool-btn dark" style="cursor:default">
+        ${icons.more}
+        <span class="meet-tool-tooltip">More options</span>
+      </button>
+      <button class="meet-tool-btn leave" onclick="leaveMeet()">
+        ${icons.hangup} Leave
+      </button>
+    </div>
+  `;
+
+  // Attach camera stream
+  if(user.cameraStream){
+    const v=document.getElementById('meet-vid');
+    if(v) v.srcObject=user.cameraStream;
+  }
+
+  // Live timer
+  const ti=setInterval(()=>{
+    timer++;
+    const m=Math.floor(timer/60),s=timer%60;
+    const te=document.getElementById('meet-timer');
+    if(te) te.textContent=m+':'+(s<10?'0':'')+s;
+    else clearInterval(ti);
+  },1000);
+  meet._meetTimer=ti;
+
+  // === SCRIPTED EVENT TIMELINE ===
+
+  // 5s: "Interviewer joined" toast
+  setTimeout(()=>{
+    showMeetToast('Thangappan & Associates HR joined the call');
+    const hrPhoto=document.getElementById('hr-photo');
+    if(hrPhoto) hrPhoto.classList.add('active');
+    // Briefly show speaking indicator on HR
+    const hrTile=document.getElementById('meet-hr');
+    if(hrTile){hrTile.classList.add('speaking');setTimeout(()=>hrTile.classList.remove('speaking'),3000)}
+  },5000);
+
+  // 8s: Battery notification + connection glitch
+  setTimeout(()=>{
+    const notif=document.createElement('div');notif.className='sys-notif';
+    notif.innerHTML='🔋 <strong>Battery: 4%</strong><br>Connect to power to continue charging.';
+    document.body.appendChild(notif);
+    setTimeout(()=>{notif.classList.add('out');setTimeout(()=>notif.remove(),500)},5000);
+    // Glitch all tiles
+    document.querySelectorAll('.meet-tile').forEach(t=>{
+      t.style.transition='filter 0.3s';
+      t.style.filter='blur(3px) grayscale(0.6) brightness(0.7)';
+    });
+    const warn=document.createElement('div');
+    warn.className='meet-conn-warning';
+    warn.innerHTML='⚠️ Unstable connection — Reconnecting...';
+    meet.querySelector('.meet-grid-area').appendChild(warn);
+    setTimeout(()=>{
+      document.querySelectorAll('.meet-tile').forEach(t=>{t.style.filter='';t.style.transition=''});
+      warn.remove();
+      setMood('angry');
+      showMeetToast('Where were you? 😤 Not a great first impression, '+user.displayName+'.',5000);
+    },6000);
+  },8000);
+
+  // 12s: OTP notification
+  setTimeout(()=>{
+    const otp=Math.floor(100000+Math.random()*900000);
+    if(Notification.permission==='granted'){
+      new Notification('ThangappanCV Verification',{body:`Your OTP is ${otp}. Valid 10 mins. Do NOT share.`});
+    } else {
+      const n=document.createElement('div');n.className='sys-notif';
+      n.innerHTML=`📱 VM-THANGCV<br>Your OTP for interview verification is ${otp}.<br>Valid for 10 minutes. Do not share this OTP.`;
+      document.body.appendChild(n);
+      setTimeout(()=>{n.classList.add('out');setTimeout(()=>n.remove(),500)},6000);
+    }
+  },12000);
+
+  // 15s: HR starts "speaking" — muffled audio + static canvas + captions
+  setTimeout(()=>{
+    playAudio('interview');
+    const hr=document.getElementById('meet-hr');
+    const hrTile=document.getElementById('meet-hr');
+    if(hrTile) hrTile.classList.add('speaking');
+    // Replace HR photo with noisy canvas to simulate bad connection
+    const hrPhoto=document.getElementById('hr-photo');
+    if(hrPhoto) hrPhoto.style.display='none';
+    const canvas=document.createElement('canvas');
+    canvas.id='hr-canvas';canvas.width=400;canvas.height=300;
+    canvas.style.cssText='width:100%;height:100%;object-fit:cover;border-radius:8px';
+    hr.insertBefore(canvas,hr.firstChild);
+    const cx=canvas.getContext('2d');
+    // Draw Thangappan photo underneath the static
+    const img=new Image();img.src='Thangappan1.jpeg';
+    const ni=setInterval(()=>{
+      cx.globalAlpha=0.15;
+      if(img.complete) cx.drawImage(img,0,0,canvas.width,canvas.height);
+      cx.globalAlpha=1;
+      for(let i=0;i<300;i++){
+        cx.fillStyle=`rgba(${Math.random()*80+40},${Math.random()*80+40},${Math.random()*80+40},${0.15+Math.random()*0.15})`;
+        cx.fillRect(Math.random()*canvas.width,Math.random()*canvas.height,3+Math.random()*3,2+Math.random()*2);
+      }
+      // Occasional scan lines
+      if(Math.random()>0.7){
+        const y=Math.random()*canvas.height;
+        cx.fillStyle='rgba(255,255,255,0.03)';
+        cx.fillRect(0,y,canvas.width,2);
+      }
+    },80);
+    setTimeout(()=>{clearInterval(ni);if(hrTile)hrTile.classList.remove('speaking')},10000);
+    // Captions
+    const cap=document.createElement('div');
+    cap.className='meet-caption-bar';
+    cap.innerHTML=`<strong>HR:</strong> "So, ${user.displayName}... tell me about yourself."`;
+    meet.querySelector('.meet-grid-area').appendChild(cap);
+    setTimeout(()=>{cap.innerHTML+=`<br><strong>HR:</strong> "..."`;},7000);
+    setTimeout(()=>{cap.innerHTML+=`<br><strong>HR:</strong> <em>[frozen]</em>`;},14000);
+    setTimeout(()=>{if(cap.parentNode)cap.remove()},18000);
+  },15000);
+}
+
+// Meet helper: toast notification
+function showMeetToast(text,duration){
+  duration=duration||3000;
+  const meet=document.getElementById('fake-meet');
+  if(!meet)return;
+  const toast=document.createElement('div');
+  toast.className='meet-toast';
+  toast.textContent=text;
+  meet.querySelector('.meet-grid-area').appendChild(toast);
+  setTimeout(()=>{toast.classList.add('out');setTimeout(()=>toast.remove(),300)},duration);
+}
+
+// Meet mic toggle
+function toggleMeetMic(){
+  const btn=document.getElementById('meet-mic-btn');
+  const isOff=btn.classList.contains('off');
+  btn.classList.toggle('off');
+  const micSvg=isOff
+    ? '<svg viewBox="0 0 24 24"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/><path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg>'
+    : '<svg viewBox="0 0 24 24"><path d="M19 11h-1.7c0 .74-.16 1.43-.43 2.05l1.23 1.23c.56-.98.9-2.09.9-3.28zm-4.02.17c0-.06.02-.11.02-.17V5c0-1.66-1.34-3-3-3S9 3.34 9 5v.18l5.98 5.99zM4.27 3L3 4.27l6.01 6.01V11c0 1.66 1.34 3 3 3 .23 0 .44-.03.65-.08l1.66 1.66c-.71.33-1.5.52-2.31.52-2.76 0-5.3-2.1-5.3-5.1H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c.91-.13 1.77-.45 2.54-.9L19.73 21 21 19.73 4.27 3z"/></svg>';
+  btn.innerHTML=micSvg+'<span class="meet-tool-tooltip">'+(isOff?'Mute':'Unmute')+'</span>';
+  const userMicIcon=document.getElementById('user-mic-icon');
+  if(userMicIcon) userMicIcon.textContent=isOff?'🎤':'🔇';
+}
+
+// Meet cam toggle
+function toggleMeetCam(){
+  const btn=document.getElementById('meet-cam-btn');
+  const isOff=btn.classList.contains('off');
+  btn.classList.toggle('off');
+  const camSvg=isOff
+    ? '<svg viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>'
+    : '<svg viewBox="0 0 24 24"><path d="M21 6.5l-4 4V7c0-.55-.45-1-1-1H9.82L21 17.18V6.5zM3.27 2L2 3.27 4.73 6H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.21 0 .39-.08.54-.18L19.73 21 21 19.73 3.27 2z"/></svg>';
+  btn.innerHTML=camSvg+'<span class="meet-tool-tooltip">'+(isOff?'Turn off camera':'Turn on camera')+'</span>';
+  const vid=document.getElementById('meet-vid');
+  if(vid){
+    if(isOff){vid.style.display='';vid.play().catch(()=>{})}
+    else{vid.style.display='none'}
+  }
+}
+
+function leaveMeet(){
+  // Stop camera
+  if(user.cameraStream) user.cameraStream.getTracks().forEach(t=>t.stop());
+  // Clear timer
+  const meet=document.getElementById('fake-meet');
+  if(meet._meetTimer) clearInterval(meet._meetTimer);
+  // Restore body scroll
+  document.body.classList.remove('meet-active');
+  // Restore thangappan avatar
+  const thangAv=document.getElementById('thang-avatar');
+  if(thangAv) thangAv.style.display='';
+  // Fade out meet
+  meet.style.transition='opacity 0.4s';
+  meet.style.opacity='0';
+  document.getElementById('rec-banner').style.display='none';
+  setTimeout(()=>{meet.classList.add('hidden');meet.style.opacity='1';
+    // Step 1: Debit notification fires IMMEDIATELY
+    setMood('smug');
+    const debit=document.createElement('div');debit.className='debit-card slide-in';debit.id='debit-notif';
+    debit.innerHTML='📱 VM-HDFCBK<br><span style="font-family:\'Courier New\',monospace;font-weight:700">Rs.999.00</span> debited from A/c XX4821 on 01-04-26.<br>Info: CV PROCESSING FEE.<br>Avl Bal: <span style="font-family:\'Courier New\',monospace;font-weight:700">Rs.0.00</span><br><span style="font-size:0.7rem;color:#888">-ThangappanCV Services Pvt Ltd</span>';
+    document.body.appendChild(debit);
+    // Auto-dismiss after 3 seconds
+    setTimeout(()=>{
+      debit.classList.remove('slide-in');
+      debit.classList.add('slide-out');
+      setTimeout(()=>{debit.remove();showRound2Card()},400);
+    },3000);
+  },500);
+}
+
+function showRound2Card(){
+  const pm=document.getElementById('p95-post-meet');pm.classList.remove('hidden');
+  document.getElementById('p95-card').style.display='none';
+  pm.innerHTML=`<div class="page-card" style="text-align:center;padding:48px 40px" id="round2-card">
+    <img src="Thangappan1.jpeg" style="width:80px;height:80px;border-radius:50%;border:3px solid var(--gold);margin-bottom:16px">
+    <p style="font-family:'Gochi Hand',cursive;font-size:1.4rem;color:var(--forest);line-height:1.9;margin-bottom:20px">
+      There is a Round 2 interview tomorrow.<br>See you in the bathroom at 9 AM.<br>Be well dressed.
+    </p>
+    <button class="btn btn-primary" onclick="showPattiche()">Confirm ✓</button>
+  </div>`;
+}
+
+function showPattiche(){
+  const card=document.getElementById('round2-card');
+  card.innerHTML=`<div class="pattiche-wrap">
+    <span class="pattiche-emoji">🤡</span>
+    <h2 class="pattiche-title">Pattiche....</h2>
+    <p class="pattiche-sub">This is <em>NOT</em> your CV generator.</p>
+    <p class="pattiche-name">I am <strong>Mr. THANGAPPAN</strong></p>
+    <div class="pattiche-divider"></div>
+    <div class="pattiche-bubble" id="moon-line" style="opacity:0;transition:opacity 1s">
+      🌙 We will take you to the <span class="hl">MOON</span>
+    </div>
+    <button class="btn btn-saffron hidden" id="moon-btn" onclick="goPage(10)" style="margin-top:28px;padding:16px 44px;font-size:0.9rem;letter-spacing:0.12em">LET'S GO 🚀</button>
+  </div>`;
+  setTimeout(()=>{document.getElementById('moon-line').style.opacity='1'},1500);
+  setTimeout(()=>{document.getElementById('moon-btn').classList.remove('hidden')},2500);
+}
+
+/* ============ PAGE 10: SUN ============ */
+function buildSnow(containerId){
+  const c=document.getElementById(containerId);
+  c.innerHTML='';
+  for(let i=0;i<20;i++){
+    const s=document.createElement('span');
+    s.textContent=['❄','❅','❆','✦'][Math.floor(Math.random()*4)];
+    s.style.cssText=`left:${Math.random()*100}%;animation-duration:${4+Math.random()*5}s;animation-delay:${-Math.random()*6}s;font-size:${0.7+Math.random()*1}rem;`;
+    c.appendChild(s);
+  }
+}
+window.initPage10=function(){
+  buildSnow('sun-snow-container');
+  // Spawn heat particles
+  const pc=document.getElementById('sun-particles');
+  if(pc){for(let i=0;i<12;i++){const p=document.createElement('div');p.className='sun-particle';const sz=4+Math.random()*8;p.style.cssText=`width:${sz}px;height:${sz}px;left:${Math.random()*100}%;top:${40+Math.random()*40}%;background:rgba(255,${180+Math.random()*75},0,${0.3+Math.random()*0.4});animation:particleFloat ${2+Math.random()*3}s ease-out infinite;animation-delay:${Math.random()*3}s`;pc.appendChild(p)}}
+  setTimeout(()=>{document.getElementById('p10-sub').classList.remove('hidden')},1200);
+  setTimeout(()=>{document.getElementById('p10-btn').classList.remove('hidden')},2200);
+};
+
+/* ============ PAGE 11: RELATIONSHIP ============ */
+window.initPage11=function(){
+  const sf=document.getElementById('p11-snowflakes');sf.innerHTML='';
+  for(let i=0;i<15;i++){
+    const s=document.createElement('div');s.className='snowflake';s.textContent='❄';
+    s.style.left=Math.random()*100+'%';s.style.animationDuration=(4+Math.random()*4)+'s';
+    s.style.animation=`snowfall ${4+Math.random()*4}s linear infinite`;s.style.animationDelay=Math.random()*4+'s';
+    sf.appendChild(s);
+  }
+  typeWrite('p11-intro',"So — are you under romantic surveillance? 🕵️ Or operating solo?",()=>{});
+};
+function p11Pick(v){
+  document.querySelectorAll('#p11-choice .choice-card').forEach(c=>c.classList.add('disabled'));
+  if(v==='complicated'){
+    typeWrite('p11-box1',"Sorry, I don't accept 'complicated.' 😔 Just pick one. It's okay.",()=>{
+      document.getElementById('p11-choice').innerHTML='<div class="choice-card" data-val="committed" onclick="p11Pick(\'committed\')">I have a bf/gf 💑</div><div class="choice-card" data-val="solo" onclick="p11Pick(\'solo\')">I\'m flying solo ✈️</div>';
+    });return;
+  }
+  user.status=v;
+  if(v==='solo') p11Solo();
+  else p11Committed();
+}
+function p11Solo(){
+  typeWrite('p11-box1',"Well... I figured. 🙂",()=>{
+    setTimeout(()=>{
+      const solo=document.getElementById('p11-solo');solo.classList.remove('hidden');
+      solo.innerHTML=`<div class="dating-card"><img src="${user.avatar}" style="width:100px;height:100px;border-radius:50%;border:3px solid var(--gold);margin:0 auto 12px;display:block"><h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--forest)">${user.displayName}</h3><div style="margin:8px 0"><span class="tag">${user.city}</span><span class="tag">${user.bmiCategory}</span><span class="tag">likes ${user.snack}</span></div><p style="color:var(--red);font-weight:700">Match likelihood: ${3+Math.floor(Math.random()*5)}%</p></div>`;
+      // Solo path goes to preferences page first (11a)
+      setTimeout(()=>{goPage('11a')},2000);
+    },1500);
+  });
+}
+
+/* ============ PAGE 11a: PREFERENCES (Solo) ============ */
+window.initPage11a=function(){
+  typeWrite('p11a-box',"Okay. Let's approach this scientifically. What are you actually looking for? 🔬",()=>{
+    document.getElementById('p11a-inputs').classList.remove('hidden');
+  });
+};
+function p11aSubmit(){
+  document.querySelectorAll('#p11a-inputs input').forEach(e=>e.disabled=true);
+  document.getElementById('p11a-ok').disabled=true;
+  typeWrite('p11a-box2',"Noted. Thangappan has taken notes. Very detailed notes. 📝",()=>{
+    setTimeout(()=>goPage('11b'),1500);
+  });
+}
+
+/* ============ PAGE 11b: DATING ADVICE (Solo) ============ */
+const datingLines=[
+  "Okay. Let's fix this. Let's start with the face.",
+  "Makeup is not going to cut it. 😐",
+  "Haircut? 🤔 Might as well cut that head off. Could work.",
+  "Personality? Maybe use ChatGPT to generate one. The current one isn't loading.",
+  null,null,null
+];
+window.initPage11b=function(){
+  datingLines[4]="Interests? You like "+user.snack+". Lead with that. It's your strongest point.";
+  datingLines[5]="Bio: 'I am "+user.displayName+". I once scored "+user.grade+"%. I am trying.' — Honest. Refreshing.";
+  datingLines[6]="Listen. The right person is out there. Probably also using ChatGPT to figure out their life. You'll find each other. 🤝";
+  // Show dating card
+  document.getElementById('p11b-solo-card').innerHTML=`<div class="dating-card"><img src="${user.avatar}" style="width:80px;height:80px;border-radius:50%;border:3px solid var(--gold);margin:0 auto 12px;display:block"><h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--forest)">${user.displayName}</h3><p style="color:var(--red);font-weight:600;font-size:0.85rem">Match likelihood: ${3+Math.floor(Math.random()*5)}%</p></div>`;
+  const adv=document.getElementById('p11b-advice');
+  let idx=0;
+  function nextLine(){
+    if(idx>=datingLines.length){
+      // Show final Malayalam lines
+      const fin=document.getElementById('p11b-final');fin.classList.remove('hidden');
+      const fbox=document.getElementById('p11b-final-box');
+      fbox.style.opacity='0';fbox.style.transition='opacity 1.5s';
+      fbox.innerHTML='<span style="font-family:\'Gochi Hand\',cursive;font-size:1.4rem;line-height:1.9">Ithonnum ninakk Shashwatham alla.<br>Vella panikk podo. 💪</span>';
+      setTimeout(()=>{fbox.style.opacity='1'},100);
+      setTimeout(()=>{document.getElementById('p11b-exit').classList.remove('hidden')},2000);
+      return;
+    }
+    typeWrite('p11b-box',datingLines[idx],()=>{
+      idx++;
+      if(idx<datingLines.length){
+        const btn=document.createElement('button');btn.className='btn btn-ghost';btn.style.marginTop='8px';
+        btn.textContent='ok 😶';btn.onclick=()=>{btn.remove();nextLine()};adv.appendChild(btn);
+      }else{nextLine()}
+    });
+  }
+  nextLine();
+};
+
+/* ============ PAGE 11 COMMITTED PATH ============ */
+function p11Committed(){
+  typeWrite('p11-box1',"Oh. Okay. Didn't see that coming. Good for you, I guess. 🙂",()=>{
+    const cm=document.getElementById('p11-committed');cm.classList.remove('hidden');
+    cm.innerHTML='<label class="input-label">Describe your partner briefly (appearance, how long together)</label><textarea id="p11-partner" placeholder="..."></textarea><button class="btn btn-primary btn-full" onclick="p11PartnerSubmit()">OK, here they are</button>';
+  });
+}
+function p11PartnerSubmit(){
+  user.partnerDesc=document.getElementById('p11-partner').value;
+  document.getElementById('p11-partner').disabled=true;
+  document.getElementById('p11-committed').querySelector('button').disabled=true;
+  typeWrite('p11-box2','<span style="font-family:\'Gochi Hand\',cursive;font-size:1.2rem;color:rgba(255,255,255,0.7)">Thangappan is consulting the stars... <span class="dot-1">●</span><span class="dot-2">●</span><span class="dot-3">●</span></span>',()=>{});
+  document.getElementById('p11-box2').innerHTML='<span style="font-family:\'Gochi Hand\',cursive;font-size:1.2rem;color:rgba(255,255,255,0.7)">Thangappan is consulting the stars... <span class="dot-1">●</span><span class="dot-2">●</span><span class="dot-3">●</span></span>';
+  document.getElementById('p11-box2').classList.remove('hidden');
+  setTimeout(()=>{
+    typeWrite('p11-box2',"This is bad.",()=>{
+      const rs=document.getElementById('p11-rashi-section');rs.classList.remove('hidden');
+      rs.innerHTML='<label class="input-label">Your Rashi (zodiac sign)</label><select id="p11-rashi"><option value="">Select...</option><option>Mesha (Aries)</option><option>Vrishabha (Taurus)</option><option>Mithuna (Gemini)</option><option>Karka (Cancer)</option><option>Simha (Leo)</option><option>Kanya (Virgo)</option><option>Tula (Libra)</option><option>Vrishchika (Scorpio)</option><option>Dhanu (Sagittarius)</option><option>Makara (Capricorn)</option><option>Kumbha (Aquarius)</option><option>Meena (Pisces)</option></select><button class="btn btn-primary btn-full" onclick="p11RashiSubmit()">Confirm</button>';
+    });
+  },8000);
+}
+function p11RashiSubmit(){
+  user.rashi=document.getElementById('p11-rashi').value||'unknown';
+  document.getElementById('p11-rashi').disabled=true;
+  const couples={"Mesha (Aries)":"Bonnie & Clyde","Vrishabha (Taurus)":"Antony & Cleopatra","Mithuna (Gemini)":"Romeo & Juliet","Karka (Cancer)":"Napoleon & Josephine","Simha (Leo)":"Henry VIII & Anne Boleyn","Kanya (Virgo)":"Samson & Delilah","Tula (Libra)":"Paris & Helen","Vrishchika (Scorpio)":"Caesar & Cleopatra","Dhanu (Sagittarius)":"Shah Jahan & Mumtaz","Makara (Capricorn)":"Odysseus & Penelope","Kumbha (Aquarius)":"Orpheus & Eurydice","Meena (Pisces)":"Layla & Majnun"};
+  const couple=couples[user.rashi]||"Romeo & Juliet";
+  setTimeout(()=>{
+    typeWrite('p11-box3',"തങ്ങളുടെ രാശി പറയുന്നത്... You two are like "+couple+". Historically doomed, but poetic. I'm not saying break up — the stars are just... not saying stay together either. 🙂",()=>{
+      // Committed path goes to partner details (11c) instead of 12
+      document.getElementById('p11-next').classList.remove('hidden');
+      document.getElementById('p11-next').onclick=function(){goPage('11c')};
+    });
+  },2000);
+}
+
+/* ============ PAGE 11c: PARTNER DETAILS (Committed) ============ */
+window.initPage11c=function(){
+  typeWrite('p11c-box1',"Okay. I need to know more about this person. 🔍 For professional reasons.",()=>{
+    document.getElementById('p11c-inputs').classList.remove('hidden');
+  });
+};
+function p11cSubmit(){
+  document.querySelectorAll('#p11c-inputs input').forEach(e=>e.disabled=true);
+  document.getElementById('p11c-ok').disabled=true;
+  const reveal=document.getElementById('p11c-reveal');reveal.classList.remove('hidden');
+  reveal.innerHTML='<div class="thang-box" style="text-align:left">Interesting. Very interesting. 🤔 Thangappan has consulted the data.</div>';
+  setTimeout(()=>{
+    const lines=["Padikkan vitta padikkanam.","Alland karangi nadakkan alla vendath."];
+    const lines2=["Break up is the best option for their future.","Don't ruin their life with your stupidity."];
+    let html='<div style="text-align:center;margin-top:20px">';
+    lines.forEach(l=>{html+=`<p style="font-family:'Gochi Hand',cursive;font-size:1.5rem;color:var(--forest);line-height:1.9;opacity:0;transition:opacity 1s" class="p11c-line">${l}</p>`});
+    lines2.forEach(l=>{html+=`<p style="font-family:'Gochi Hand',cursive;font-size:1.3rem;color:var(--red);line-height:1.9;opacity:0;transition:opacity 1s" class="p11c-line2">${l}</p>`});
+    html+='<button class="btn btn-danger hidden" id="p11c-exit" style="margin-top:16px">Exit 🚪</button></div>';
+    reveal.innerHTML+=html;
+    // Animate lines in
+    const allLines=reveal.querySelectorAll('.p11c-line');
+    allLines.forEach((el,i)=>setTimeout(()=>{el.style.opacity='1'},i*1200));
+    const allLines2=reveal.querySelectorAll('.p11c-line2');
+    setTimeout(()=>{
+      allLines2.forEach((el,i)=>setTimeout(()=>{el.style.opacity='1'},i*1200));
+    },allLines.length*1200+2000);
+    setTimeout(()=>{
+      document.getElementById('p11c-exit').classList.remove('hidden');
+      document.getElementById('p11c-exit').onclick=function(){
+        // Show "Veendum chammi" dialogue
+        reveal.innerHTML='<div class="thang-box" style="text-align:center;margin-top:20px"><span style="font-family:\'Gochi Hand\',cursive;font-size:1.3rem">Veendum chammi... that was for your CV. 🤭</span></div><button class="btn btn-primary hidden" id="p11c-continue" style="margin-top:16px">Continue to CV →</button>';
+        setTimeout(()=>{
+          document.getElementById('p11c-continue').classList.remove('hidden');
+          document.getElementById('p11c-continue').onclick=function(){goPage(12)};
+        },1500);
+      };
+    },allLines.length*1200+2000+allLines2.length*1200+1000);
+  },1500);
+}
+
+
+/* ============ PAGE 12: FAVOURITE COLOUR ============ */
+window.initPage12=function(){
+  typeWrite('p12-intro',"Important for the CV. Colour theory is real. 🎨 Trust.",()=>{
+    document.getElementById('p12-inputs').classList.remove('hidden');
+  });
+};
+function p12Submit(){
+  user.color=document.getElementById('p12-picker').value||document.getElementById('p12-name').value||'#52B788';
+  user.wrongColor=wrongColour(user.color);
+  document.getElementById('p12-ok').disabled=true;
+  // Blackout
+  const bo=document.getElementById('blackout');bo.style.display='flex';bo.style.opacity='0';
+  bo.style.transition='opacity 0.5s';setTimeout(()=>bo.style.opacity='1',10);
+  setTimeout(()=>{
+    bo.style.background=user.wrongColor;
+    bo.innerHTML='<p style="font-size:5rem;animation:bounceIn 0.6s both">Ta-Da ✨</p>';
+    setTimeout(()=>{
+      bo.style.transition='opacity 0.5s';bo.style.opacity='0';
+      setTimeout(()=>{bo.style.display='none';bo.style.background='#000';
+        document.getElementById('p12-swatch').style.background=user.wrongColor;
+        document.getElementById('p12-reveal').classList.remove('hidden');
+        document.getElementById('p12-no-btn').textContent='NO, mine was '+user.color;
+      },600);
+    },2000);
+  },3000);
+}
+function p12Yes(){
+  document.getElementById('p12-reveal').querySelectorAll('button').forEach(b=>b.disabled=true);
+  typeWrite('p12-box',"...no it isn't. i changed it. you just agreed to a lie. this is concerning 😐",()=>{
+    document.getElementById('p12-next').classList.remove('hidden');
+  });
+}
+function p12No(){
+  document.getElementById('p12-reveal').querySelectorAll('button').forEach(b=>b.disabled=true);
+  const msg=user.status==='solo'?"see this is why you are single "+user.displayName+". colour blind 🙄":"see buddy. this is why you should break up. you are blinded by love 😌";
+  typeWrite('p12-box',msg,()=>{document.getElementById('p12-next').classList.remove('hidden')});
+}
+
+/* ============ PAGE 13: REFERENCE ============ */
+window.initPage13=function(){
+  typeWrite('p13-intro',"not your neighbour's number. someone worth mentioning. you probably haven't worked with anyone like that but ok 🙂",()=>{
+    document.getElementById('p13-step1').classList.remove('hidden');
+  });
+};
+function p13PhoneSubmit(){
+  user.refNumber=document.getElementById('p13-phone').value;
+  document.getElementById('p13-phone').disabled=true;
+  document.getElementById('p13-ok1').disabled=true;
+  // SCREEN SHAKE
+  document.body.classList.add('shake');setTimeout(()=>document.body.classList.remove('shake'),700);
+  setMood('angry');
+  typeWrite('p13-box1',"what am i supposed to call them 🥰 batman? 🤬 idiot enter the NAME first 🤬",()=>{
+    document.getElementById('p13-step2').classList.remove('hidden');
+  });
+}
+function p13NameSubmit(){
+  user.refName=document.getElementById('p13-name').value.trim()||'Anonymous';
+  document.getElementById('p13-name').disabled=true;
+  document.getElementById('p13-ok2').disabled=true;
+  setMood('smug');
+  typeWrite('p13-box2',user.refName+". okay. they will receive... absolutely nothing. i'm not actually calling anyone. this is a cv builder "+user.displayName+" 😭",()=>{
+    document.getElementById('p13-next').classList.remove('hidden');
+  });
+}
+
+/* ============ PAGE 14: SOFT SKILLS ============ */
+window.initPage14=function(){
+  playAudio('4');
+  setTimeout(()=>{
+    typeWrite('p14-box1',"Your soft skill is you can use AI and still come up with dumber solution 😀",()=>{
+      document.getElementById('p14-input').classList.remove('hidden');
+    });
+  },2000);
+};
+function p14Submit(){
+  user.softSkills=document.getElementById('p14-skills').value;
+  document.getElementById('p14-skills').disabled=true;
+  document.getElementById('p14-ok').disabled=true;
+  // Typing 8s
+  const tb=document.getElementById('p14-typing');tb.classList.remove('hidden');
+  tb.innerHTML='<span style="font-family:\'Caveat\';font-size:1.2rem;color:rgba(255,255,255,0.7)">Thangappan is typing&nbsp;<span class="dot-1">●</span><span class="dot-2">●</span><span class="dot-3">●</span></span>';
+  setTimeout(()=>{
+    typeWrite('p14-typing',"soft.",()=>{
+      setTimeout(()=>{
+        typeWrite('p14-box2',"'"+user.softSkills+"'. soft. very soft. like everything else about this cv so far 🙂",()=>{
+          document.getElementById('p14-next').classList.remove('hidden');
+        });
+      },500);
+    });
+  },8000);
+}
+
+/* ============ PAGE 15: DESCRIPTION ============ */
+let p15CollabDone=false,p15CollabBack=0;
+window.initPage15=function(){
+  typeWrite('p15-intro',"last thing before we generate. tell me about yourself. briefly.",()=>{
+    document.getElementById('p15-step1').classList.remove('hidden');
+  });
+};
+function p15Step1(){
+  user.description=document.getElementById('p15-desc1').value;
+  document.getElementById('p15-desc1').disabled=true;
+  document.getElementById('p15-step1').querySelector('button').disabled=true;
+  typeWrite('p15-box1',"seriously bro? you're... this? 🙂 honesty is the best policy. let the world know what you really are. don't be shy.",()=>{
+    document.getElementById('p15-step2').classList.remove('hidden');
+    p15SetupCollab();
+  });
+}
+function p15SetupCollab(){
+  const inp=document.getElementById('p15-desc2');let started=false;
+  inp.addEventListener('keydown',function(){
+    if(started)return;started=true;
+    setTimeout(()=>{
+      const wrap=document.getElementById('p15-step2');
+      const tag=document.createElement('div');tag.className='collab-tag';tag.id='p15-collab';
+      tag.innerHTML='<span class="dot"></span> Thangappan is also editing this field';
+      wrap.appendChild(tag);
+      setTimeout(()=>{
+        const inject=' just your average person who needed a website to figure out their life';let ii=0;
+        const iv=setInterval(()=>{
+          if(ii<inject.length){inp.value+=inject[ii++]}else{clearInterval(iv);p15CollabDone=true}
+        },80);
+      },1000);
+    },5000);
+  });
+  inp.addEventListener('input',()=>{
+    if(p15CollabDone&&p15CollabBack<1&&!inp.value.includes('just your average person')){
+      p15CollabBack++;
+      const inject=' just your average person who needed a website to figure out their life';let ii=0;
+      const iv=setInterval(()=>{if(ii<inject.length){inp.value+=inject[ii++]}else{clearInterval(iv);
+        const tag=document.getElementById('p15-collab');if(tag)tag.remove();
+        typeWrite('p15-box2',"sorry. i just thought that was more accurate. 🙂",()=>{});
+      }},80);
+    }
+  });
+}
+function p15Step2(){
+  user.trueDescription=document.getElementById('p15-desc2').value;
+  document.getElementById('p15-desc2').disabled=true;
+  document.getElementById('p15-step2').querySelector('button').disabled=true;
+  const tag=document.getElementById('p15-collab');if(tag)tag.remove();
+  // Loading bar
+  document.getElementById('p15-loading').classList.remove('hidden');
+  const fill=document.getElementById('p15-fill');
+  let pct=0;const iv=setInterval(()=>{pct+=2.5;fill.style.width=pct+'%';if(pct>=100){clearInterval(iv);
+    document.getElementById('p15-load-text').textContent='almost done. one authenticity check.';
+    setTimeout(()=>goPage(16),2000);
+  }},100);
+}
+
+/* ============ PAGE 16: AI DEPENDENCY ============ */
+function p16Pick(v){
+  user.aiDep=v;
+  document.querySelectorAll('#p16-choice .choice-card').forEach(c=>c.classList.add('disabled'));
+  const roasts={yes:"it's alright. but honestly why do you need a cv bro clearly ai works better than you.",little:"'a little.' i wasn't asking how big your brain is but ok",no:"impressive. ...did chatgpt write this answer too 🤔"};
+  typeWrite('p16-box',roasts[v],()=>{document.getElementById('p16-gen').classList.remove('hidden')});
+}
+function p16Generate(){
+  document.getElementById('p16-gen').classList.add('hidden');
+  document.getElementById('p16-loading').classList.remove('hidden');
+  const stages=["Compiling your existence...","Cross-referencing your BMI...","Consulting the stars (briefly)...","Questioning everything...","Done."];
+  const fill=document.getElementById('p16-fill'),txt=document.getElementById('p16-load-text');
+  let si=0,pct=0;
+  const iv=setInterval(()=>{
+    pct+=2;fill.style.width=pct+'%';
+    if(pct%20===0&&si<stages.length){txt.textContent=stages[si++]}
+    if(pct>=100){clearInterval(iv);
+      // Confetti
+      for(let i=0;i<40;i++){
+        const c=document.createElement('div');c.className='confetti';
+        c.style.cssText=`left:${Math.random()*100}%;top:-10px;background:${['#F4A921','#1B4332','#C0392B','#2D6A4F','#52B788','#E63946'][Math.floor(Math.random()*6)]};animation:confettiFall ${2+Math.random()*2}s linear forwards`;
+        document.body.appendChild(c);setTimeout(()=>c.remove(),4000);
+      }
+      document.getElementById('p16-done').classList.remove('hidden');
+    }
+  },80);
+}
+
+/* ============ PAGE 17: FAKE CV ============ */
+window.initPage17=function(){
+  const cv=document.getElementById('p17-cv');
+  cv.innerHTML=`<div class="cv-header"><div><h1 style="font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--green-deep);margin-bottom:4px">${user.displayName}</h1><p>${user.email} · ${user.phone} · ${user.city}</p></div><img src="${user.avatar}" class="cv-avatar"></div>
+  <h2>Education</h2><p>${user.education} — ${user.subject} (Grade: ${user.grade}%)</p>
+  <h2>Experience</h2><p>${user.jobTitle} at ${user.company}</p>
+  <h2>Skills</h2><p>${user.skills}</p>
+  <h2>Soft Skills</h2><p>${user.softSkills}</p>
+  <h2>References</h2><p>${user.refName} — ${user.refNumber}</p>`;
+  // After 2s, glitch
+  setTimeout(()=>{
+    playAudio('5');
+    const text=cv.textContent;let chars=text.split('');
+    const glitchChars='!@#$%^&*()_+-=[]{}|;:,.<>?/~`';
+    let idx=0;
+    const iv=setInterval(()=>{
+      if(idx<chars.length){
+        chars[idx]=glitchChars[Math.floor(Math.random()*glitchChars.length)];
+        cv.textContent=chars.join('');idx+=3;
+      }else{clearInterval(iv);
+        cv.style.display='none';
+        const gl=document.getElementById('p17-glitch');gl.classList.remove('hidden');
+        gl.innerHTML=`<strong>NAME:</strong> ${user.displayName}<br><strong>PHOTO:</strong> <img src="${user.avatar}" style="width:60px;height:60px;border-radius:50%;filter:contrast(1.5) hue-rotate(30deg);vertical-align:middle"><br><strong>SKILLS:</strong> hidden. thangappan says so.<br><strong>EXPERIENCE:</strong> we tried.<br><strong>SOFT SKILLS:</strong> very soft<br><strong>REFERENCE:</strong> ${user.refName} (batman)<br><strong>STATUS:</strong> ${user.status||'unknown'}<br><strong>ASTROLOGY:</strong> ${user.rashi||'N/A'} energy detected<br><strong>BMI:</strong> ${user.bmiCategory}<br><strong>FAVOURITE COLOUR:</strong> ${user.color} (shown <span style="color:${user.wrongColor}">${user.wrongColor}</span>)<br><br><strong>VERDICT:</strong> this is not a cv. scroll down.`;
+        document.getElementById('page-17').querySelector('.page-card').style.background='#111';
+        document.getElementById('page-17').querySelector('.page-card').style.color='#ccc';
+        setTimeout(()=>{document.getElementById('p17-scroll').classList.remove('hidden')},2000);
+      }
+    },20);
+  },2000);
+};
+
+/* ============ PAGE 18: LIFE AUDIT ============ */
+window.initPage18=function(){
+  // Remove accent bar
+  document.getElementById('page-18').querySelector('.page-card').style.setProperty('--no-accent','1');
+  document.getElementById('page-18').querySelector('.page-card').classList.add('no-accent');
+  // Shrink avatar
+  const av=document.getElementById('thang-avatar');if(av){av.querySelector('.thang-face').style.width='40px';av.querySelector('.thang-face').style.height='40px';av.querySelector('.thang-face').style.fontSize='20px'}
+  const gradeRoasts={85:"clearly they don't teach cv-building.",65:"the marks spoke.",50:"life taught you. or didn't.",0:"attendance passed you."};
+  let gradeR='';
+  if(user.grade>85)gradeR=gradeRoasts[85];else if(user.grade>=65)gradeR=gradeRoasts[65];else if(user.grade>=50)gradeR=gradeRoasts[50];else gradeR=gradeRoasts[0];
+  const statusLine=user.status==='committed'?(user.rashi?'your rashi couple energy is... concerning.':'relationship: noted.'):'still looking. chatgpt is rooting for you.';
+  const lines=[
+    {text:user.realName+".",cls:'audit-name'},
+    {text:"you came here for a cv."},
+    {text:"you filled in 17 pages of your life instead."},
+    {text:"so here it is. not a cv. your actual situation as i see it."},
+    {cls:'audit-divider'},
+    {text:"name: "+user.realName+". mispronounced by most people. you tried to correct one of them (me). noted."},
+    {text:"you are "+user.bmiCategory+". you like "+user.snack+". these two facts are connected and you know it."},
+    {text:"you studied "+user.education+". got "+user.grade+"%. "+gradeR+" you still showed up though."},
+    {text:"work experience: "+user.jobTitle+" at "+user.company+". thangappan has seen worse. barely."},
+    {text:"skills: "+user.skills+". hidden skills: classified. even from you, apparently."},
+    {text:"soft skills: "+user.softSkills+". soft. noted."},
+    {text:"favourite colour: "+user.color+". we showed you "+user.wrongColor+". you noticed. eventually."},
+    {text:"relationship status: "+user.status+". "+statusLine},
+    {text:"you described yourself as: '"+user.trueDescription+"'. that's the most honest thing on this whole page."},
+    {text:"ai dependency: "+user.aiDep+". chatgpt didn't make you. you made you. messy and all."},
+    {cls:'audit-divider'},
+    {text:"also — this session was recorded. thangappan reviewed it. he has notes."},
+    {text:"the notes are not included here."},
+    {text:"some things are better left between you and the recording."}
+  ];
+  const cont=document.getElementById('p18-lines');let idx=0;
+  function showNext(){
+    if(idx>=lines.length){document.getElementById('p18-next').classList.remove('hidden');return}
+    const l=lines[idx++];
+    if(l.cls==='audit-divider'){const d=document.createElement('div');d.className='audit-divider';cont.appendChild(d);setTimeout(showNext,800);return}
+    const p=document.createElement('p');p.className=l.cls||'audit-line';
+    cont.appendChild(p);
+    // Typewriter for each line
+    let i=0;const txt=l.text;
+    const iv=setInterval(()=>{if(i<txt.length){p.textContent=txt.slice(0,++i)}else{clearInterval(iv);setTimeout(showNext,900)}},18);
+  }
+  showNext();
+};
+
+/* ============ PAGE 19: THE REAL MESSAGE ============ */
+window.initPage19=function(){
+  // Fade out avatar and recording banner
+  const av=document.getElementById('thang-avatar');if(av)av.style.opacity='0';
+  const rb=document.getElementById('rec-banner');if(rb)rb.style.transition='opacity 1s';if(rb)rb.style.opacity='0';
+  const msgs=[
+    "The biggest interview you'll ever face isn't for a job.",
+    "",
+    "It's what life throws at you on a random Tuesday when nothing is going right.",
+    "",
+    "Build a better tomorrow for your life —",
+    "then we can build a better CV for your today.",
+    "",
+    "You missed January 1st anyway.",
+    "But you're not late.",
+    "",
+    "This April 1st — it's about you. It's your day.",
+    "This is your ticket out of this miserable, useless, wonderful life.",
+    "",
+    "Happy April Fools.",
+    "Happy birthday."
+  ];
+  const cont=document.getElementById('p19-lines');let idx=0;
+  function showLine(){
+    if(idx>=msgs.length){
+      setTimeout(()=>{
+        // Fade avatar back in small
+        const av=document.getElementById('thang-avatar');
+        if(av){av.style.opacity='1';av.querySelector('.thang-face').style.width='40px';av.querySelector('.thang-face').style.height='40px';av.querySelector('.thang-face').style.fontSize='20px'}
+        document.getElementById('p19-thang').classList.remove('hidden');
+        setTimeout(()=>{document.getElementById('p19-arrow').classList.remove('hidden')},4000);
+      },3000);
+      return;
+    }
+    const line=msgs[idx++];
+    if(!line){const br=document.createElement('br');cont.appendChild(br);setTimeout(showLine,500);return}
+    const p=document.createElement('p');p.style.margin='0';cont.appendChild(p);
+    let i=0;
+    const iv=setInterval(()=>{if(i<line.length){p.textContent=line.slice(0,++i)}else{clearInterval(iv);setTimeout(showLine,1200)}},35);
+  }
+  showLine();
+};
+
+/* ============ PAGE 19a: CV DOWNLOAD ============ */
+window.initPage19a=function(){
+  const line = user.status==='committed'
+    ? "Veendum chammi... your CV is here. 🤭"
+    : "Took a while. Worth it. Probably. 🙂";
+  typeWrite('p19a-box',line,()=>{
+    document.getElementById('p19a-dl').classList.remove('hidden');
+  });
+};
+function p19aDownload(){
+  document.getElementById('p19a-dl').disabled=true;
+  // Show download modal
+  const overlay=document.createElement('div');overlay.className='dl-overlay';overlay.id='dl-overlay';
+  overlay.innerHTML=`<div class="dl-modal">
+    <h3>✅ File Downloaded</h3>
+    <p>${user.displayName||'User'}_CV.pdf has been saved<br>to your downloads folder.</p>
+    <div style="display:flex;gap:12px;justify-content:center">
+      <button class="btn btn-primary" onclick="closeDlModal()" style="padding:10px 20px;font-size:0.85rem">Open File</button>
+      <button class="btn btn-ghost" onclick="closeDlModal()" style="padding:10px 20px;font-size:0.85rem">Close</button>
+    </div>
+  </div>`;
+  document.body.appendChild(overlay);
+}
+function closeDlModal(){
+  const ov=document.getElementById('dl-overlay');if(ov)ov.remove();
+  // Render actual CV
+  renderCV();
+}
+function renderCV(){
+  const r=document.getElementById('p19a-cv-render');r.classList.remove('hidden');
+  r.innerHTML=`<div class="cv-doc" style="padding:48px 52px;max-width:600px;margin:0 auto;box-shadow:var(--s3);border-radius:4px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px">
+      <div>
+        <h1 style="font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--forest);margin-bottom:4px">${user.displayName||user.realName}</h1>
+        <p style="font-family:'Nunito',sans-serif;font-size:0.85rem;color:var(--ink-2)">${user.email||''} · ${user.phone||''}<br>${user.city||''}</p>
+      </div>
+      <img src="${user.avatar}" style="width:80px;height:80px;border-radius:50%;border:2px solid var(--gold)">
+    </div>
+    <h2>Education</h2><p>${user.education||'N/A'} — ${user.grade||0}%</p>
+    <h2>Experience</h2><p>${user.jobTitle||'Strategic Operations Lead, Informal Sector (2020–present)'}</p>
+    <h2>Skills</h2><p>${user.skills||'N/A'}</p>
+    <h2>Soft Skills</h2><p>${user.softSkills||'N/A'}</p>
+    <h2>References</h2><p>${user.refName||'N/A'} — ${user.refNumber||'N/A'}</p>
+    <h2>About</h2><p>${user.trueDescription||user.description||'N/A'}</p>
+    <p style="font-family:'Nunito',sans-serif;font-size:0.7rem;color:var(--ink-3);text-align:right;margin-top:24px;border-top:1px solid var(--line);padding-top:12px">Generated by ThangappanCV · April 1st Edition</p>
+  </div>`;
+  document.getElementById('p19a-next').classList.remove('hidden');
+}
+
+/* ============ PAGE 20: THE END ============ */
+window.initPage20=function(){
+  playAudio('6');
+  // Spawn confetti particles
+  const card=document.getElementById('p20-card');
+  const cols=['#F4A921','#C9960C','#52B788','#E63946','#3D8C60','#FFD700','#9B59B6','#E9C46A'];
+  for(let i=0;i<35;i++){const c=document.createElement('div');c.className='af-confetti';const sz=4+Math.random()*7;c.style.cssText=`left:${Math.random()*100}%;top:-10px;width:${sz}px;height:${sz}px;background:${cols[Math.floor(Math.random()*cols.length)]};animation:afDrift ${3+Math.random()*4}s linear infinite;animation-delay:${Math.random()*4}s`;card.appendChild(c)}
+};
+let p20Done=false;
+function p20Finish(){
+  if(p20Done)return;p20Done=true;
+  const btn=document.getElementById('p20-finish');if(btn)btn.classList.add('hidden');
+  const finalLines=[
+    {t:'Still wasting?'},
+    {t:'U r a fool.'},
+    {d:true},
+    {t:'This is <em>April</em> Bro...'},
+    {t:'Happy birthday genius...'},
+    {t:'oh my bad — <strong>FOOL.</strong>'},
+  ];
+  const cont=document.getElementById('p20-final');
+  let idx=0;
+  function showNext(){
+    if(idx>=finalLines.length){setTimeout(()=>{const f=document.getElementById('p20-footer');if(f)f.classList.remove('hidden')},800);return}
+    const item=finalLines[idx++];
+    if(item.d){const d=document.createElement('div');d.className='af-divider';cont.appendChild(d);setTimeout(showNext,500);return}
+    const p=document.createElement('p');p.className='af-line';p.innerHTML=item.t;
+    cont.appendChild(p);setTimeout(()=>{p.classList.add('vis')},50);setTimeout(showNext,900);
+  }
+  showNext();
+}
+
+/* ============ CSS ADDITIONS ============ */
+const extraCSS=document.createElement('style');
+extraCSS.textContent=`
+@keyframes bounceIn{0%{transform:scale(0.3);opacity:0}50%{transform:scale(1.05)}70%{transform:scale(0.95)}100%{transform:scale(1);opacity:1}}
+@keyframes sunPulse{from{filter:brightness(1)}to{filter:brightness(1.15)}}
+@keyframes pulse{0%,100%{opacity:0.7}50%{opacity:1}}
+.page-card.no-accent::before{display:none}
+`;
+document.head.appendChild(extraCSS);
+</script>
+</body>
+</html>
